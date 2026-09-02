@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>আমরা আসলে অতীতকে দেখি কেন? Science Lite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Newsreader:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0E0A1C;
+      --panel: #191333;
+      --panel2: #221A44;
+      --ink: #F1ECFF;
+      --ink-soft: #B8ACDD;
+      --accent: #A78BFA;
+      --accent2: #E879F9;
+      --line: #332A5C;
+      --bn: "Noto Sans Bengali", sans-serif;
+      --serif: "Newsreader", Georgia, serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 15% -10%, #3B2172 0%, transparent 45%),
+        radial-gradient(circle at 100% 20%, #4C1D6B 0%, transparent 40%),
+        var(--bg);
+      color: var(--ink);
+      font-family: var(--bn);
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { max-width: 660px; margin: 0 auto; padding: 0 22px; }
+
+    header.site-header {
+      padding: 48px 0 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-title { font-family: var(--serif); font-size: 1.9rem; font-weight: 600; margin: 0; }
+    .site-title a { color: var(--ink); text-decoration: none; }
+    .site-tagline { font-family: var(--bn); color: var(--ink-soft); margin: 6px 0 0; font-size: 0.95rem; }
+
+    .back-link {
+      display: inline-block;
+      margin: 30px 0 20px;
+      color: var(--accent2);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-family: var(--bn);
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .tag {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(167,139,250,0.25), rgba(232,121,249,0.2));
+      color: var(--accent2);
+      font-size: 0.78rem;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      font-family: var(--bn);
+    }
+
+    article { max-width: 66ch; padding-bottom: 70px; }
+
+    h1 {
+      font-family: var(--bn);
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 1.35;
+      margin: 0 0 8px;
+      background: linear-gradient(120deg, #F1ECFF, #C9AEFF 60%, #E879F9);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      margin: 0 0 30px;
+    }
+
+    .post-meta { font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 8px; }
+
+    h2 {
+      font-family: var(--bn);
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin: 46px 0 14px;
+      color: var(--ink);
+    }
+
+    p { margin: 0 0 18px; color: #D9D2F0; }
+
+    .hero {
+      position: relative;
+      margin: 26px 0 34px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 50px -20px rgba(167,139,250,0.4);
+    }
+    .hero svg { display: block; width: 100%; height: auto; }
+
+    .figure {
+      background: linear-gradient(160deg, var(--panel), var(--panel2));
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px;
+      margin: 26px 0;
+      box-shadow: 0 16px 40px -22px rgba(167,139,250,0.35);
+    }
+    .figure svg { width: 100%; height: auto; display: block; }
+    .figure figcaption {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      margin-top: 12px;
+      text-align: center;
+      font-family: var(--bn);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .card {
+      background: linear-gradient(150deg, var(--panel2), var(--panel));
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+    .card .icon { font-size: 1.6rem; display: block; margin-bottom: 8px; }
+    .card .val {
+      font-family: var(--serif);
+      color: var(--accent2);
+      font-weight: 600;
+      font-size: 1.05rem;
+      display: block;
+    }
+    .card .lbl {
+      font-family: var(--bn);
+      color: var(--ink-soft);
+      font-size: 0.82rem;
+      display: block;
+      margin-top: 4px;
+    }
+
+    .closing {
+      font-family: var(--bn);
+      font-size: 1.1rem;
+      color: var(--ink);
+      padding: 20px 22px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(167,139,250,0.15), rgba(232,121,249,0.1));
+      border: 1px solid var(--line);
+      margin: 30px 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0;
+      color: var(--ink-soft);
+      font-size: 0.85rem;
+      font-family: var(--bn);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <p class="site-title"><a href="../index.html">Science Lite</a></p>
+      <p class="site-tagline">জটিল বিজ্ঞান, সহজ ভাষায়।</p>
+    </header>
+
+    <main>
+      <a class="back-link" href="../index.html">&larr; সব পোস্ট</a>
+      <article>
+        <span class="tag">🔭 জ্যোতির্বিজ্ঞান</span>
+        <h1>আমরা আসলে অতীতকে দেখি কেন?</h1>
+        <p class="subtitle">আলো কীভাবে আমাদের সময়ের পেছনে নিয়ে যায়</p>
+
+        <div class="hero">
+          <svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="skyGlow" cx="30%" cy="20%" r="80%">
+                <stop offset="0%" stop-color="#4C2A8F"/>
+                <stop offset="100%" stop-color="#0E0A1C"/>
+              </radialGradient>
+              <linearGradient id="milkyway" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#A78BFA" stop-opacity="0"/>
+                <stop offset="50%" stop-color="#C9AEFF" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#E879F9" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <rect width="700" height="360" fill="url(#skyGlow)"/>
+            <rect x="-50" y="60" width="800" height="90" fill="url(#milkyway)" transform="rotate(-8 350 180)"/>
+            <g fill="#F1ECFF">
+              <circle cx="60" cy="40" r="1.6"/><circle cx="120" cy="80" r="1.2"/><circle cx="200" cy="30" r="1.8"/>
+              <circle cx="260" cy="90" r="1.3"/><circle cx="340" cy="50" r="1.5"/><circle cx="400" cy="20" r="1.2"/>
+              <circle cx="470" cy="70" r="1.7"/><circle cx="540" cy="35" r="1.3"/><circle cx="610" cy="60" r="1.6"/>
+              <circle cx="660" cy="25" r="1.2"/><circle cx="90" cy="130" r="1.3"/><circle cx="250" cy="140" r="1.5"/>
+              <circle cx="420" cy="120" r="1.2"/><circle cx="580" cy="130" r="1.4"/><circle cx="150" cy="20" r="1"/>
+              <circle cx="320" cy="15" r="1"/><circle cx="500" cy="18" r="1.1"/>
+            </g>
+            <circle cx="230" cy="60" r="3" fill="#E879F9">
+              <animate attributeName="opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <path d="M310 360 C 300 260, 320 220, 350 210 C 380 220, 400 260, 390 360 Z" fill="#120C24"/>
+            <circle cx="350" cy="185" r="20" fill="#120C24"/>
+            <path d="M280 360 C 285 300, 300 270, 350 210 C 400 270, 415 300, 420 360 Z" fill="#0D0918" opacity="0.6"/>
+          </svg>
+        </div>
+
+        <p>একটি অদ্ভুত প্রশ্ন দিয়ে শুরু করি।</p>
+        <p>আপনি যখন আকাশের দিকে তাকান, তখন কি সত্যিই মহাবিশ্বের বর্তমান দেখেন?</p>
+        <p>উত্তর হলো, না।</p>
+        <p>আপনি আসলে মহাবিশ্বের অতীত দেখেন।</p>
+        <p>কারণ আমরা কোনো বস্তুকে সরাসরি দেখি না। আমরা দেখি সেই বস্তু থেকে ছুটে আসা আলো। আর আলোর গতিবেগ সীমিত। তাই কোনো বস্তু যত দূরে, তার আলো আমাদের কাছে পৌঁছাতে তত বেশি সময় লাগে।</p>
+        <p>ধরুন, কোনো একটি তারা পৃথিবী থেকে ১০০ আলোকবর্ষ দূরে। সেই তারা থেকে আলো আমাদের চোখে পৌঁছাতে প্রায় ১০০ বছর সময় নেয়।</p>
+        <p>অর্থাৎ আপনি আজ যে আলোটি দেখছেন, সেটি সেই তারা থেকে বের হয়েছিল প্রায় ১০০ বছর আগে। তাই আমরা তারাটিকে তার বর্তমান অবস্থায় নয়, ১০০ বছর আগের অবস্থায় দেখছি।</p>
+        <p>এখানেই মহাবিশ্বকে দেখার সবচেয়ে চমৎকার বিষয়গুলোর একটি লুকিয়ে আছে।</p>
+
+        <h2>দূরের মানেই পুরোনো</h2>
+        <p>আলো শূন্যস্থানে প্রতি সেকেন্ডে প্রায় ২,৯৯,৭৯২ কিলোমিটার বেগে চলে। সাধারণভাবে আমরা এটিকে প্রায় ৩ লাখ কিলোমিটার প্রতি সেকেন্ড বলি। এই গতি অকল্পনীয় রকম দ্রুত। এক সেকেন্ডে আলো পৃথিবীকে প্রায় ৭ বার প্রদক্ষিণ করতে পারে।</p>
+
+        <div class="figure">
+          <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="90" r="26" fill="#E879F9"/>
+            <text x="60" y="140" text-anchor="middle" fill="#B8ACDD" font-size="12" font-family="Noto Sans Bengali">তারা</text>
+            <line x1="90" y1="90" x2="470" y2="90" stroke="#A78BFA" stroke-width="2" stroke-dasharray="6 6"/>
+            <circle r="5" fill="#F1ECFF">
+              <animateMotion dur="2.5s" repeatCount="indefinite" path="M90 90 L470 90"/>
+            </circle>
+            <text x="270" y="70" text-anchor="middle" fill="#B8ACDD" font-size="12" font-family="Noto Sans Bengali">১০০ আলোকবর্ষ</text>
+            <circle cx="500" cy="90" r="22" fill="#4FA6E8"/>
+            <text x="500" y="135" text-anchor="middle" fill="#B8ACDD" font-size="12" font-family="Noto Sans Bengali">পৃথিবী</text>
+            <circle cx="540" cy="90" r="4" fill="#F1ECFF"/>
+            <text x="540" y="115" text-anchor="middle" fill="#B8ACDD" font-size="11" font-family="Noto Sans Bengali">পর্যবেক্ষক</text>
+          </svg>
+          <figcaption>তারা থেকে আলো ছুটে আসছে, পৃথিবীতে পৌঁছাতে সময় লাগে বহু বছর।</figcaption>
+        </div>
+
+        <p>তবুও মহাবিশ্বের বিশালতার কাছে আলোর এই গতিও সীমাবদ্ধ। চাঁদ থেকে পৃথিবীতে আলো আসতে সময় লাগে প্রায় ১.৩ সেকেন্ড। সূর্য থেকে পৃথিবীতে আলো পৌঁছাতে লাগে প্রায় ৮ মিনিট ২০ সেকেন্ড।</p>
+        <p>সূর্যের ক্ষেত্রে এই সময়ের ব্যবধান আমাদের দৈনন্দিন জীবনে তেমন গুরুত্বপূর্ণ নয়। কিন্তু মহাকাশের দূরত্ব যখন কয়েক হাজার, কয়েক কোটি কিংবা কয়েকশ কোটি আলোকবর্ষ হয়, তখন বিষয়টি সম্পূর্ণ ভিন্ন।</p>
+
+        <div class="cards">
+          <div class="card"><span class="icon">🌙</span><span class="val">১.৩ সেকেন্ড</span><span class="lbl">চাঁদ</span></div>
+          <div class="card"><span class="icon">☀️</span><span class="val">৮ মি ২০ সে</span><span class="lbl">সূর্য</span></div>
+          <div class="card"><span class="icon">⭐</span><span class="val">কয়েক বছর</span><span class="lbl">নিকটবর্তী তারা</span></div>
+          <div class="card"><span class="icon">🌌</span><span class="val">কোটি বছর</span><span class="lbl">দূরবর্তী গ্যালাক্সি</span></div>
+        </div>
+
+        <h2>আলোকবর্ষ আসলে কী?</h2>
+        <p>"আলোকবর্ষ" শুনে অনেকেই মনে করেন এটি সময়ের একক। আসলে আলোকবর্ষ দূরত্বের একক। এক বছরে আলো যতটা দূরত্ব অতিক্রম করে, সেটিই এক আলোকবর্ষ। এর মান প্রায় ৯.৪৬ ট্রিলিয়ন কিলোমিটার।</p>
+        <p>তাই কোনো গ্যালাক্সি যদি আমাদের থেকে ১০০ কোটি আলোকবর্ষ দূরে থাকে, তার আলো আমাদের কাছে পৌঁছাতে প্রায় ১০০ কোটি বছর সময় নিতে পারে। অর্থাৎ আমরা সেই গ্যালাক্সির প্রায় ১০০ কোটি বছর আগের আলো দেখছি। এখানে "দূরত্ব" এবং "অতীত" যেন একে অপরের সঙ্গে যুক্ত হয়ে যায়।</p>
+
+        <h2>তাহলে টেলিস্কোপ কী করে?</h2>
+        <p>টেলিস্কোপের কাজ শুধু মহাকাশের বস্তুগুলোকে বড় করে দেখা নয়। এর অন্যতম গুরুত্বপূর্ণ কাজ হলো অত্যন্ত দুর্বল এবং দূরবর্তী আলো সংগ্রহ করা।</p>
+
+        <div class="figure">
+          <svg viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(150,40)">
+              <polygon points="30,10 60,25 60,55 30,70 0,55 0,25" fill="#C9AEFF" opacity="0.9"/>
+              <polygon points="90,10 120,25 120,55 90,70 60,55 60,25" fill="#A78BFA" opacity="0.9"/>
+              <polygon points="150,10 180,25 180,55 150,70 120,55 120,25" fill="#C9AEFF" opacity="0.9"/>
+              <polygon points="60,60 90,75 90,105 60,120 30,105 30,75" fill="#E879F9" opacity="0.85"/>
+              <polygon points="120,60 150,75 150,105 120,120 90,105 90,75" fill="#A78BFA" opacity="0.85"/>
+              <line x1="90" y1="90" x2="90" y2="180" stroke="#D9D2F0" stroke-width="4"/>
+              <rect x="60" y="175" width="60" height="14" rx="4" fill="#D9D2F0"/>
+            </g>
+            <text x="250" y="235" text-anchor="middle" fill="#B8ACDD" font-size="12" font-family="Noto Sans Bengali">ষড়ভুজাকার আয়না দিয়ে গঠিত আধুনিক টেলিস্কোপ</text>
+          </svg>
+          <figcaption>James Webb Space Telescope-এর মতো টেলিস্কোপ ষড়ভুজাকার আয়না ব্যবহার করে অত্যন্ত দুর্বল, দূরবর্তী আলো সংগ্রহ করে।</figcaption>
+        </div>
+
+        <p>একটি বড় টেলিস্কোপ অনেক বেশি আলো সংগ্রহ করতে পারে। ফলে বিজ্ঞানীরা এমন দূরবর্তী বস্তু পর্যবেক্ষণ করতে পারেন, যাদের আলো পৃথিবীতে পৌঁছাতে কোটি কোটি বছর সময় নিয়েছে। এই কারণেই টেলিস্কোপকে এক অর্থে মহাবিশ্বের অতীত দেখার যন্ত্র বলা যায়। আমরা যত দূরের মহাজাগতিক বস্তু পর্যবেক্ষণ করি, তত পুরোনো আলো আমাদের কাছে পৌঁছায়।</p>
+
+        <h2>কিন্তু এখানেই গল্প আরও চমকপ্রদ হয়ে যায়</h2>
+        <p>মহাবিশ্ব স্থির নয়। এটি প্রসারিত হচ্ছে। মহাবিশ্ব প্রসারিত হওয়ার কারণে দূরবর্তী গ্যালাক্সিগুলোর আলো আমাদের কাছে আসার পথে দীর্ঘায়িত বা প্রসারিত হয়। এর ফলে আলোর তরঙ্গদৈর্ঘ্য বড় হয়ে যায় এবং আলো স্পেকট্রামের লাল দিকের দিকে সরে যায়। এ ঘটনাকে বলা হয় cosmological redshift।</p>
+
+        <div class="figure">
+          <svg viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg">
+            <path id="wave" d="M20 80 Q 45 40, 70 80 T 120 80 T 170 80 T 220 80" fill="none" stroke="#4FA6E8" stroke-width="3">
+              <animate attributeName="d" dur="3s" repeatCount="indefinite"
+                values="
+                  M20 80 Q 45 40, 70 80 T 120 80 T 170 80 T 220 80;
+                  M20 80 Q 60 40, 100 80 T 180 80 T 260 80 T 340 80;
+                  M20 80 Q 45 40, 70 80 T 120 80 T 170 80 T 220 80"/>
+              <animate attributeName="stroke" dur="3s" repeatCount="indefinite" values="#4FA6E8;#E85B5B;#4FA6E8"/>
+            </path>
+            <line x1="20" y1="120" x2="560" y2="120" stroke="#332A5C" stroke-width="1"/>
+            <polygon points="560,120 545,113 545,127" fill="#B8ACDD"/>
+            <text x="290" y="145" text-anchor="middle" fill="#B8ACDD" font-size="12" font-family="Noto Sans Bengali">মহাবিশ্ব প্রসারিত হওয়ায় তরঙ্গদৈর্ঘ্য বড় হয়ে লাল দিকে সরে যায়</text>
+          </svg>
+          <figcaption>Cosmological redshift: আলোর তরঙ্গ প্রসারিত হয়ে নীল থেকে লাল দিকে সরে যাচ্ছে।</figcaption>
+        </div>
+
+        <p>বিজ্ঞানীরা এই redshift পরিমাপ করে কোনো দূরবর্তী গ্যালাক্সির আলো মহাবিশ্বের ইতিহাসের কোন পর্যায় থেকে এসেছে, সে সম্পর্কে গুরুত্বপূর্ণ তথ্য পান। অর্থাৎ আমরা শুধু দূরের গ্যালাক্সির ছবি দেখছি না। সেই আলোর মধ্যেই মহাবিশ্বের অতীতের তথ্য বহন করে আসছে।</p>
+
+        <h2>সবচেয়ে দূরের দিকে তাকালে কী দেখা যায়?</h2>
+        <p>বিজ্ঞানীরা যখন অত্যন্ত দূরের মহাবিশ্ব পর্যবেক্ষণ করেন, তখন তারা এমন সময়ের আলো দেখতে পান যখন বর্তমানের অনেক গ্যালাক্সিই তাদের আজকের রূপে ছিল না।</p>
+        <p>উদাহরণ হিসেবে, James Webb Space Telescope-এর মতো আধুনিক টেলিস্কোপগুলো অত্যন্ত দূরবর্তী ও প্রাচীন গ্যালাক্সির আলো পর্যবেক্ষণ করতে পারে। কিছু গ্যালাক্সির আলো আমাদের কাছে পৌঁছাতে ১৩ বিলিয়নেরও বেশি বছর সময় নিয়েছে।</p>
+        <p>অর্থাৎ আমরা যখন সেই আলো দেখি, তখন আমরা সেই গ্যালাক্সিকে তার বর্তমান অবস্থায় দেখছি না। আমরা তাকে মহাবিশ্বের অত্যন্ত প্রাচীন যুগে যেমন ছিল, তার একটি ছবি দেখছি।</p>
+
+        <h2>আমরা কি তাহলে সত্যিই সময়ের পেছনে তাকাতে পারি?</h2>
+        <p>এক অর্থে, হ্যাঁ। তবে আমরা সময়ের মধ্যে ভ্রমণ করছি না। আমরা শুধু এমন আলো গ্রহণ করছি, যা বহু বছর আগে কোনো মহাজাগতিক বস্তু থেকে যাত্রা শুরু করেছিল।</p>
+        <p>ভাবুন, মহাবিশ্বের প্রতিটি দূরবর্তী বস্তু যেন তার অতীতের একটি বার্তা আলো হিসেবে পাঠিয়ে চলেছে। সেই বার্তা পৃথিবীতে পৌঁছাতে যত বেশি সময় নেয়, আমরা সেই বস্তুর তত পুরোনো অবস্থা দেখতে পাই। এ কারণেই জ্যোতির্বিজ্ঞানীরা যখন আরও দূরের মহাবিশ্ব পর্যবেক্ষণ করেন, তখন তারা শুধু "আরও দূর" দেখেন না। তারা আরও পুরোনো মহাবিশ্ব দেখেন।</p>
+
+        <h2>আরেকটি গুরুত্বপূর্ণ বিষয়</h2>
+        <p>"আমরা যত দূরে দেখি, তত পুরোনো দেখি" কথাটি সাধারণভাবে ঠিক হলেও মহাবিশ্বের প্রসারণের কারণে খুব দূরের বস্তুর ক্ষেত্রে দূরত্বের সংজ্ঞা কিছুটা জটিল হয়ে যায়। কারণ আলো যখন আমাদের দিকে আসছিল, তখন মহাবিশ্ব নিজেই প্রসারিত হচ্ছিল।</p>
+        <p>তাই একটি গ্যালাক্সির আলো কত বছর ভ্রমণ করেছে, সেই গ্যালাক্সি আজ আমাদের থেকে কত দূরে, এবং আলো যখন বের হয়েছিল তখন সেটি কত দূরে ছিল, এই তিনটি দূরত্ব এক জিনিস নয়। এ কারণেই আধুনিক কসমোলজিতে lookback time, comoving distance এবং light-travel distance-এর মতো বিভিন্ন ধারণা ব্যবহার করা হয়।</p>
+
+        <h2>শেষ পর্যন্ত ব্যাপারটা কী দাঁড়াল?</h2>
+        <p>রাতের আকাশ শুধু অসংখ্য আলোর বিন্দু নয়। এটি মহাবিশ্বের ইতিহাসের একটি বিশাল সংগ্রহশালা। চাঁদকে আমরা দেখি প্রায় ১.৩ সেকেন্ড আগের অবস্থায়। সূর্যকে দেখি প্রায় ৮ মিনিট ২০ সেকেন্ড আগের অবস্থায়। দূরবর্তী নক্ষত্রকে হয়তো দেখি বহু বছর আগের অবস্থায়। আর কোটি কোটি আলোকবর্ষ দূরের গ্যালাক্সির আলো আমাদের সামনে তুলে ধরতে পারে মহাবিশ্বের বিলিয়ন বছর আগের চেহারা।</p>
+
+        <div class="closing">
+          তাই পরেরবার রাতে আকাশের দিকে তাকালে একটা কথা মনে রাখবেন:<br><br>
+          আপনি শুধু মহাকাশের দিকে তাকাচ্ছেন না।<br>
+          আপনি মহাবিশ্বের ইতিহাসের দিকে তাকাচ্ছেন।<br><br>
+          আর সেই ইতিহাসের প্রতিটি অধ্যায় পৃথিবীতে পৌঁছায় আলোর মাধ্যমে।
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      Made by Feha Bin Ali &middot; Science Lite
+    </footer>
+  </div>
+</body>
+</html>
