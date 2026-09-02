@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Your Brain Actually Works, Science Lite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #12111C;
+      --bg-panel: #1B1A29;
+      --ink: #EDEBF5;
+      --ink-soft: #A7A3BF;
+      --accent: #8B7FFF;
+      --accent2: #4FE0C9;
+      --line: #2E2C42;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 20% 0%, #1E1B33 0%, #12111C 55%);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+
+    header.site-header {
+      padding: 56px 0 36px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-title { font-family: var(--serif); font-size: 2rem; font-weight: 600; margin: 0; }
+    .site-title a { color: var(--ink); text-decoration: none; }
+    .site-tagline { font-style: italic; color: var(--ink-soft); margin: 6px 0 0; font-size: 0.95rem; }
+
+    .back-link {
+      display: inline-block;
+      margin: 32px 0 24px;
+      color: var(--accent2);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .tag {
+      display: inline-block;
+      background: rgba(139, 127, 255, 0.15);
+      color: var(--accent);
+      font-size: 0.78rem;
+      padding: 3px 10px;
+      border-radius: 3px;
+      margin-bottom: 14px;
+    }
+
+    article { max-width: 62ch; padding-bottom: 60px; }
+
+    article h1 {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+
+    .post-meta { font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 36px; }
+
+    article h2 {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      margin: 44px 0 14px;
+      color: var(--ink);
+    }
+
+    article p { margin: 0 0 18px; color: #D6D3E6; }
+
+    .figure {
+      background: var(--bg-panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 24px 0;
+    }
+
+    .figure svg { width: 100%; height: auto; display: block; }
+
+    .figure figcaption {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    details {
+      background: var(--bg-panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 22px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 500;
+      color: var(--accent2);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::before {
+      content: "+";
+      font-size: 1.1rem;
+      color: var(--accent);
+      transition: transform 0.2s ease;
+    }
+
+    details[open] summary::before {
+      content: "\2212";
+    }
+
+    details p {
+      margin-top: 12px;
+      color: #C9C6DC;
+    }
+
+    .lobe-label {
+      font-family: var(--sans);
+      font-size: 11px;
+      fill: var(--ink-soft);
+    }
+
+    .lobe-shape {
+      transition: fill 0.25s ease, opacity 0.25s ease;
+      cursor: default;
+    }
+
+    .lobe-shape:hover {
+      fill: var(--accent);
+      opacity: 0.9;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 32px 0;
+      color: var(--ink-soft);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <p class="site-title"><a href="../index.html">Science Lite</a></p>
+      <p class="site-tagline">Real science, explained without the jargon.</p>
+    </header>
+
+    <main>
+      <a class="back-link" href="../index.html">&larr; All posts</a>
+      <article>
+        <span class="tag">Neuroscience</span>
+        <h1>How Your Brain Actually Works</h1>
+        <p class="post-meta">September 2, 2026 &middot; 7 min read</p>
+
+        <p>Your brain is running right now, and it's doing an almost unbelievable amount of work to let you read this sentence. About 86 billion neurons are firing, rewiring, and passing signals to each other, all inside something that weighs roughly as much as a small cauliflower. Here's what's actually happening in there.</p>
+
+        <h2>The neuron: your brain's basic unit</h2>
+        <p>A neuron is a single nerve cell built to do one job: pass along an electrical and chemical signal. It has three main parts. Dendrites reach out like branches to receive signals from other neurons. The cell body processes that input. The axon is a long fiber that carries the signal onward, sometimes over a meter long in the case of neurons running down your spinal cord.</p>
+
+        <div class="figure">
+          <svg viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg">
+            <line x1="60" y1="110" x2="120" y2="70" stroke="#4FE0C9" stroke-width="2" opacity="0.7"/>
+            <line x1="60" y1="110" x2="120" y2="150" stroke="#4FE0C9" stroke-width="2" opacity="0.7"/>
+            <line x1="70" y1="90" x2="120" y2="95" stroke="#4FE0C9" stroke-width="2" opacity="0.7"/>
+            <line x1="70" y1="130" x2="120" y2="125" stroke="#4FE0C9" stroke-width="2" opacity="0.7"/>
+            <circle cx="150" cy="110" r="38" fill="#8B7FFF" opacity="0.85"/>
+            <text x="150" y="115" text-anchor="middle" fill="#12111C" font-size="10" font-family="Public Sans">soma</text>
+            <path d="M188 110 C 280 110, 320 60, 420 60" stroke="#EDEBF5" stroke-width="2.5" fill="none"/>
+            <line x1="420" y1="60" x2="470" y2="35" stroke="#EDEBF5" stroke-width="2"/>
+            <line x1="420" y1="60" x2="470" y2="60" stroke="#EDEBF5" stroke-width="2"/>
+            <line x1="420" y1="60" x2="470" y2="85" stroke="#EDEBF5" stroke-width="2"/>
+            <circle r="6" fill="#4FE0C9">
+              <animateMotion dur="2.4s" repeatCount="indefinite"
+                path="M188 110 C 280 110, 320 60, 420 60" />
+            </circle>
+            <text x="60" y="185" fill="#A7A3BF" font-size="11" font-family="Public Sans">dendrites</text>
+            <text x="130" y="170" fill="#A7A3BF" font-size="11" font-family="Public Sans">cell body</text>
+            <text x="280" y="95" fill="#A7A3BF" font-size="11" font-family="Public Sans">axon</text>
+            <text x="440" y="20" fill="#A7A3BF" font-size="11" font-family="Public Sans">terminals</text>
+          </svg>
+          <figcaption>A signal enters through the dendrites, gets processed in the cell body, then travels down the axon to reach the next neuron.</figcaption>
+        </div>
+
+        <h2>How neurons actually talk to each other</h2>
+        <p>Neurons don't physically touch. Between the end of one neuron and the start of the next is a tiny gap called a synapse. When an electrical signal reaches the end of an axon, it triggers the release of chemical messengers called neurotransmitters, things like dopamine, serotonin, and glutamate. These chemicals drift across the gap and lock onto receptors on the next neuron, which can either excite it into firing or calm it down.</p>
+
+        <p>This chemical handoff is what most psychiatric medications actually target: adjusting how much of a given neurotransmitter is available in that gap.</p>
+
+        <details>
+          <summary>Why does this matter for learning?</summary>
+          <p>Every time a connection between two neurons gets used, it gets slightly stronger. Neuroscientists sum this up as "neurons that fire together, wire together." Practicing a skill is, physically, the repeated strengthening of a specific chain of synapses.</p>
+        </details>
+
+        <h2>The brain's major regions</h2>
+        <p>Zoom out from single neurons and the brain organizes itself into regions with different jobs. Hover or tap each shape below.</p>
+
+        <div class="figure">
+          <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+            <path class="lobe-shape" d="M120 200 C 100 120, 160 60, 260 55 C 300 52, 320 70, 310 100 C 350 90, 360 130, 330 150 L 300 190 C 260 220, 180 230, 120 200 Z" fill="#8B7FFF" opacity="0.55"/>
+            <text class="lobe-label" x="170" y="115">Frontal lobe</text>
+            <text class="lobe-label" x="170" y="128">decisions, planning</text>
+
+            <path class="lobe-shape" d="M310 100 C 350 90, 400 100, 420 130 C 440 150, 420 175, 390 175 L 330 150 C 360 130, 350 90, 310 100 Z" fill="#4FE0C9" opacity="0.55"/>
+            <text class="lobe-label" x="345" y="115">Parietal</text>
+            <text class="lobe-label" x="345" y="128">senses, space</text>
+
+            <path class="lobe-shape" d="M300 190 L 330 150 L 390 175 C 420 190, 430 220, 400 235 L 350 245 C 320 240, 300 220, 300 190 Z" fill="#FF9F7C" opacity="0.55"/>
+            <text class="lobe-label" x="330" y="270">Occipital</text>
+            <text class="lobe-label" x="330" y="283">vision</text>
+
+            <path class="lobe-shape" d="M120 200 C 150 240, 200 250, 240 235 L 300 190 C 280 220, 220 240, 180 250 C 150 255, 125 230, 120 200 Z" fill="#F7D774" opacity="0.55"/>
+            <text class="lobe-label" x="150" y="240">Temporal</text>
+            <text class="lobe-label" x="150" y="253">memory, sound</text>
+
+            <path class="lobe-shape" d="M240 235 C 260 260, 280 270, 300 260 C 300 240, 290 225, 270 225 C 255 225, 245 230, 240 235 Z" fill="#B4B0D6" opacity="0.6"/>
+            <text class="lobe-label" x="220" y="290">Cerebellum</text>
+            <text class="lobe-label" x="220" y="303">balance, coordination</text>
+          </svg>
+          <figcaption>A simplified side view. Real lobe boundaries aren't this clean, but the general layout holds.</figcaption>
+        </div>
+
+        <p>The frontal lobe handles reasoning, decision-making, and impulse control, it's also the last region to fully mature, often not until your mid-20s. The parietal lobe integrates sensory information and spatial awareness. The temporal lobe handles hearing and plays a major role in forming memories. The occipital lobe, at the very back, is almost entirely dedicated to processing vision. Below all of it, the cerebellum fine-tunes movement and balance.</p>
+
+        <h2>How a memory actually forms</h2>
+        <p>When you experience something new, a structure deep in the temporal lobe called the hippocampus acts like a temporary save file. Over the following hours and days, especially during sleep, that memory gets gradually transferred into longer-term storage across the cortex, the brain's outer layer.</p>
+
+        <details>
+          <summary>Why sleep matters so much for memory</summary>
+          <p>During deep sleep, the hippocampus essentially replays the day's events, strengthening the connections tied to that memory so it can be moved into permanent storage. Cutting sleep short interrupts this transfer, which is a big part of why studying all night before an exam is often counterproductive.</p>
+        </details>
+
+        <h2>Neuroplasticity: your brain keeps changing</h2>
+        <p>For a long time, scientists assumed the adult brain was fixed. We now know that's wrong. The brain continues forming new connections, and in a few regions, even new neurons, throughout life. This is called neuroplasticity. It's why learning a new language, an instrument, or a skill at 40 or 70 is genuinely possible: the underlying wiring is still adaptable.</p>
+
+        <p>Every thought you have is a pattern of electrical and chemical signals moving through this network, billions of tiny handoffs happening every second, forming the entire experience of being you.</p>
+      </article>
+    </main>
+
+    <footer>
+      Made by Feha Bin Ali &middot; Science Lite
+    </footer>
+  </div>
+</body>
+</html>
