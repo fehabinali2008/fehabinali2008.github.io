@@ -1,288 +1,697 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demystifying the Flow: How Your Menstrual Cycle Actually Works</title>
-    <!-- Importing Distinct Typography Profiles -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-color: #fcfbfa;
-            --text-color: #2c2a29;
-            --primary-accent: #b85a5c;
-            --secondary-accent: #d98880;
-            --muted-tint: #e6dfd9;
-            --card-bg: rgba(255, 255, 255, 0.85);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Your Menstrual Cycle Actually Works | Science Lite</title>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-color);
-            /* SVG Off-White Paper Texture Background Overlay */
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://w3.org id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
-            color: var(--text-color);
-            line-height: 1.7;
-            padding: 2rem 1rem;
-        }
+  <style>
+    :root {
+      --ink: #352836;
+      --ink-soft: #756878;
+      --line: rgba(174, 89, 119, 0.16);
+      --white: rgba(255,255,255,0.78);
 
-        .container {
-            max-width: 760px;
-            margin: 0 auto;
-        }
+      --menstrual: #d84f67;
+      --follicular: #d99a32;
+      --ovulation: #e8759a;
+      --luteal: #8060b8;
 
-        /* Bold Distinct Title Font Style */
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            font-size: 2.8rem;
-            line-height: 1.2;
-            color: var(--text-color);
-            margin-bottom: 1.5rem;
-            text-align: left;
-        }
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Public Sans", Arial, sans-serif;
+    }
 
-        /* Eye-Catching Textured Animated Subheadings */
-        h2 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 700;
-            font-size: 1.6rem;
-            color: var(--primary-accent);
-            margin-top: 3rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            display: inline-block;
-        }
+    * { box-sizing: border-box; }
 
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--secondary-accent);
-            border-radius: 2px;
-            transition: width 0.4s ease;
-        }
+    html { scroll-behavior: smooth; }
 
-        h2:hover::after {
-            width: 100%;
-        }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      background:
+        radial-gradient(circle at 8% 4%, rgba(255, 167, 192, 0.42), transparent 23rem),
+        radial-gradient(circle at 92% 20%, rgba(248, 178, 199, 0.32), transparent 28rem),
+        radial-gradient(circle at 50% 80%, rgba(255, 216, 228, 0.38), transparent 30rem),
+        linear-gradient(135deg, #ffffff 0%, #fff9fb 45%, #ffeef3 100%);
+      min-height: 100vh;
+    }
 
-        h3 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--text-color);
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.32;
+      background-image:
+        radial-gradient(rgba(176, 75, 111, 0.13) 1px, transparent 1px);
+      background-size: 20px 20px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent 70%);
+    }
 
-        p {
-            margin-bottom: 1.25rem;
-            font-size: 1.05rem;
-        }
+    .wrap {
+      width: min(1100px, calc(100% - 36px));
+      margin: 0 auto;
+    }
 
-        .lead-paragraph {
-            font-size: 1.2rem;
-            font-weight: 500;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            border-left: 4px solid var(--primary-accent);
-            padding-left: 1.25rem;
-        }
+    /* Header */
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
 
-        /* Interactive Diagram Component Frame */
-        .interactive-visual-container {
-            background: var(--card-bg);
-            border: 1px solid var(--muted-tint);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2.5rem 0;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.02);
-            text-align: center;
-            backdrop-filter: blur(4px);
-        }
+    .site-title {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
 
-        .diagram-stage {
-            height: 160px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
+    .site-title a {
+      color: var(--ink);
+      text-decoration: none;
+    }
 
-        /* Abstract Micro-Animations for Biological Processes */
-        .biological-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: var(--primary-accent);
-            opacity: 0.85;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
+    .site-tagline {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+      text-align: right;
+    }
 
-        /* Phase Specific Animation Variants triggered via Javascript class toggles */
-        .biological-avatar.shedding {
-            animation: pulse-shed 1.5s infinite ease-in-out;
-            background: linear-gradient(135deg, #b85a5c, #8a3a3c);
-        }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin: 26px 0 20px;
+      color: #9d3f64;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
 
-        .biological-avatar.growing {
-            animation: layer-build 2s infinite ease-in-out;
-            background: linear-gradient(135deg, #e3a89e, #b85a5c);
-        }
+    .back-link:hover { text-decoration: underline; }
 
-        .biological-avatar.ovulating {
-            animation: cell-release 1.2s infinite alternate ease-in-out;
-            background: radial-gradient(circle, #f9d5bb 20%, #d98880 70%);
-        }
+    article { padding-bottom: 70px; }
 
-        .biological-avatar.stabilizing {
-            animation: shield-hold 2.5s infinite ease-in-out;
-            background: linear-gradient(135deg, #d98880, #aa7c76);
-            border: 4px solid #fff;
-        }
+    .tag {
+      display: inline-block;
+      padding: 5px 13px;
+      border: 1px solid rgba(216, 79, 103, 0.22);
+      border-radius: 999px;
+      background: rgba(255,255,255,.58);
+      color: #a13d60;
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
 
-        @keyframes pulse-shed {
-            0% { transform: scale(1); opacity: 0.9; box-shadow: 0 0 0 0 rgba(184, 90, 92, 0.5); }
-            70% { transform: scale(0.92); opacity: 0.6; box-shadow: 0 0 0 15px rgba(184, 90, 92, 0); }
-            100% { transform: scale(1); opacity: 0.9; box-shadow: 0 0 0 0 rgba(184, 90, 92, 0); }
-        }
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      color: var(--ink);
+    }
 
-        @keyframes layer-build {
-            0% { transform: scale(0.9); border-radius: 50%; }
-            50% { transform: scale(1.15); border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%; }
-            100% { transform: scale(0.9); border-radius: 50%; }
-        }
+    h1 {
+      max-width: 850px;
+      margin: 15px 0 10px;
+      font-size: clamp(2.3rem, 6vw, 4.5rem);
+      line-height: .98;
+      letter-spacing: -0.045em;
+    }
 
-        @keyframes cell-release {
-            0% { transform: scale(1) rotate(0deg); }
-            100% { transform: scale(1.1) rotate(180deg); box-shadow: 0 0 25px rgba(249, 213, 187, 0.8); }
-        }
+    h2 {
+      margin: 58px 0 12px;
+      font-size: clamp(1.7rem, 4vw, 2.35rem);
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
 
-        @keyframes shield-hold {
-            0% { transform: scale(1); filter: brightness(1); }
-            50% { transform: scale(1.05); filter: brightness(1.1); }
-            100% { transform: scale(1); filter: brightness(1); }
-        }
+    .post-meta {
+      margin: 0 0 26px;
+      color: var(--ink-soft);
+      font-size: .88rem;
+    }
 
-        .timeline-navigation {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
+    .lede {
+      max-width: 72ch;
+      margin: 0 0 16px;
+      font-size: 1.08rem;
+      font-weight: 500;
+    }
 
-        .timeline-btn {
-            background: #fff;
-            border: 1px solid var(--muted-tint);
-            padding: 0.75rem 0.25rem;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 600;
-            font-size: 0.85rem;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-            color: var(--text-color);
-        }
+    article > p:not(.lede):not(.post-meta) {
+      max-width: 72ch;
+      color: #514452;
+    }
 
-        .timeline-btn.active {
-            background: var(--primary-accent);
-            color: #fff;
-            border-color: var(--primary-accent);
-        }
+    /* Cover image */
+    .hero-cover {
+      position: relative;
+      overflow: hidden;
+      margin: 30px 0 32px;
+      border-radius: 28px;
+      border: 1px solid rgba(216, 79, 103, 0.13);
+      background: #fff;
+      box-shadow: 0 24px 70px rgba(114, 47, 72, 0.13);
+    }
 
-        .phase-description-box {
-            min-height: 80px;
-            margin-top: 1rem;
-            font-size: 0.95rem;
-            font-style: italic;
-            color: #555;
-        }
+    .hero-cover img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
 
-        /* Content List Styles */
-        ul {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
+    .hero-cover::after {
+      content: "Science Lite";
+      position: absolute;
+      right: 18px;
+      bottom: 14px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.62);
+      color: rgba(74, 42, 59, .72);
+      backdrop-filter: blur(12px);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+    }
 
-        ul li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
+    /* Online image card */
+    .online-visual {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 22px;
+      align-items: center;
+      padding: 20px;
+      margin: 26px 0;
+      border: 1px solid rgba(255,255,255,.8);
+      border-radius: 24px;
+      background: rgba(255,255,255,.48);
+      box-shadow: 0 14px 40px rgba(117, 67, 89, .08);
+      backdrop-filter: blur(18px);
+    }
 
-        ul li::before {
-            content: "•";
-            color: var(--secondary-accent);
-            font-weight: bold;
-            font-size: 1.3rem;
-            position: absolute;
-            left: 0;
-            top: -2px;
-        }
+    .online-visual img {
+      width: 100%;
+      border-radius: 16px;
+      background: rgba(255,255,255,.55);
+      padding: 8px;
+    }
 
-        .divider {
-            height: 1px;
-            background: radial-gradient(circle, var(--muted-tint) 0%, rgba(252,251,250,0) 100%);
-            margin: 3rem 0;
-            border: none;
-        }
+    .online-visual p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: .9rem;
+    }
 
-        /* Clean Link Infrastructure */
-        a {
-            color: var(--primary-accent);
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 1px rgba(184, 90, 92, 0.3) solid;
-            transition: all 0.2s ease;
-        }
+    .online-visual strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 5px;
+    }
 
-        a:hover {
-            border-bottom-color: var(--primary-accent);
-            background-color: rgba(184, 90, 92, 0.05);
-        }
+    /* Cycle wheel */
+    .wheel-figure {
+      padding: 26px;
+      margin: 30px 0;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.82);
+      border-radius: 28px;
+      background: rgba(255,255,255,.55);
+      box-shadow: 0 18px 50px rgba(115, 58, 85, .08);
+      backdrop-filter: blur(18px);
+    }
 
-        @media (max-width: 600px) {
-            h1 { font-size: 2.2rem; }
-            .timeline-navigation { grid-template-columns: 1fr 1fr; }
-            body { padding: 1rem 0.5rem; }
-        }
-    </style>
+    .wheel-figure svg {
+      width: 100%;
+      max-width: 390px;
+      height: auto;
+    }
+
+    .wheel-figure figcaption {
+      margin-top: 10px;
+      color: var(--ink-soft);
+      font-size: .82rem;
+    }
+
+    /* Four phase buttons */
+    .phase-tabs { margin: 28px 0 0; }
+    .phase-tabs input { display: none; }
+
+    .tab-labels {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .tab-labels label {
+      min-height: 98px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 10px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.8);
+      cursor: pointer;
+      color: #fff;
+      font-size: .88rem;
+      font-weight: 700;
+      box-shadow: 0 14px 30px rgba(85, 39, 60, .10);
+      transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+    }
+
+    .tab-labels label:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 38px rgba(85, 39, 60, .15);
+      filter: saturate(1.08);
+    }
+
+    .tab-labels label::before {
+      content: "";
+      width: 27px;
+      height: 27px;
+      margin-bottom: 8px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,.72);
+      background: rgba(255,255,255,.22);
+      box-shadow: inset 0 0 12px rgba(255,255,255,.22);
+    }
+
+    .tab-labels label[for="tab1"] { background: linear-gradient(135deg, #e46c7f, #c9425b); }
+    .tab-labels label[for="tab2"] { background: linear-gradient(135deg, #efbe5a, #ce8c1d); }
+    .tab-labels label[for="tab3"] { background: linear-gradient(135deg, #f39bb5, #db6188); }
+    .tab-labels label[for="tab4"] { background: linear-gradient(135deg, #a184cf, #70529f); }
+
+    #tab1:checked ~ .tab-labels label[for="tab1"],
+    #tab2:checked ~ .tab-labels label[for="tab2"],
+    #tab3:checked ~ .tab-labels label[for="tab3"],
+    #tab4:checked ~ .tab-labels label[for="tab4"] {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 22px 45px rgba(85, 39, 60, .20);
+      outline: 3px solid rgba(255,255,255,.82);
+    }
+
+    /* Blurred background, sharp content */
+    .tab-panel {
+      display: none;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,.8);
+      border-radius: 25px;
+      box-shadow: 0 20px 55px rgba(105, 49, 75, .11);
+    }
+
+    .tab-panel::before {
+      content: "";
+      position: absolute;
+      z-index: -2;
+      inset: -35px;
+      background:
+        radial-gradient(circle at 12% 18%, var(--phase-glow), transparent 38%),
+        radial-gradient(circle at 90% 85%, rgba(255,255,255,.85), transparent 35%),
+        linear-gradient(135deg, rgba(255,255,255,.83), rgba(255,255,255,.48));
+      filter: blur(18px);
+      transform: scale(1.08);
+    }
+
+    .tab-panel::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background: rgba(255,255,255,.48);
+      backdrop-filter: blur(22px);
+    }
+
+    #tab1:checked ~ .panels #panel1,
+    #tab2:checked ~ .panels #panel2,
+    #tab3:checked ~ .panels #panel3,
+    #tab4:checked ~ .panels #panel4 { display: block; }
+
+    #panel1 { --phase-glow: rgba(216,79,103,.42); border-left: 6px solid var(--menstrual); }
+    #panel2 { --phase-glow: rgba(217,154,50,.38); border-left: 6px solid var(--follicular); }
+    #panel3 { --phase-glow: rgba(232,117,154,.40); border-left: 6px solid var(--ovulation); }
+    #panel4 { --phase-glow: rgba(128,96,184,.38); border-left: 6px solid var(--luteal); }
+
+    .tab-panel h3 {
+      margin: 0 0 4px;
+      font-size: 1.55rem;
+      line-height: 1.15;
+    }
+
+    .tab-panel .days {
+      margin: 0 0 18px;
+      color: var(--ink-soft);
+      font-size: .84rem;
+      font-weight: 700;
+    }
+
+    .tab-panel p {
+      max-width: 78ch;
+      margin: 0 0 13px;
+      color: #332937;
+      font-size: .98rem;
+      font-weight: 500;
+    }
+
+    .tab-panel strong { color: #221b25; }
+
+    /* Toolkit glass cards */
+    .toolkit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin: 22px 0 10px;
+    }
+
+    .toolkit-card {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      min-height: 220px;
+      padding: 22px 16px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.86);
+      border-radius: 24px;
+      background: rgba(255,255,255,.48);
+      box-shadow: 0 15px 38px rgba(105, 49, 75, .09);
+    }
+
+    .toolkit-card::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: -25px;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(246, 146, 174, .35), transparent 38%),
+        radial-gradient(circle at 80% 85%, rgba(255, 221, 229, .72), transparent 42%);
+      filter: blur(22px);
+    }
+
+    .toolkit-card svg {
+      width: 52px;
+      height: 52px;
+      margin-bottom: 10px;
+    }
+
+    .toolkit-card h4 {
+      margin: 0 0 7px;
+      font-size: 1.05rem;
+    }
+
+    .toolkit-card p {
+      margin: 0;
+      color: #514452;
+      font-size: .83rem;
+      font-weight: 500;
+      line-height: 1.55;
+    }
+
+    /* Sources: background is blurred, text remains sharp and smaller */
+    .evidence-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .evidence-item {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 15px 16px;
+      border: 1px solid rgba(255,255,255,.82);
+      border-radius: 18px;
+      background: rgba(255,255,255,.34);
+      min-height: 115px;
+    }
+
+    .evidence-item::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: -35px;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(229, 101, 142, .40), transparent 30%),
+        radial-gradient(circle at 90% 85%, rgba(255, 214, 225, .92), transparent 45%),
+        linear-gradient(135deg, #fff5f8, #fff);
+      filter: blur(20px);
+      transform: scale(1.1);
+    }
+
+    .evidence-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #302530;
+      font-size: .86rem;
+      line-height: 1.35;
+      font-family: var(--sans);
+      font-weight: 700;
+    }
+
+    .evidence-item span {
+      display: block;
+      margin-bottom: 8px;
+      color: #7b6a77;
+      font-size: .72rem;
+      line-height: 1.45;
+    }
+
+    .evidence-item a {
+      color: #9d3f64;
+      font-size: .76rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .evidence-item a:hover { text-decoration: underline; }
+
+    footer {
+      padding: 28px 0 38px;
+      border-top: 1px solid var(--line);
+      color: var(--ink-soft);
+      font-size: .84rem;
+    }
+
+    @media (max-width: 760px) {
+      .site-header { align-items: flex-start; flex-direction: column; }
+      .site-tagline { text-align: left; }
+      .tab-labels { grid-template-columns: repeat(2, 1fr); }
+      .toolkit-grid { grid-template-columns: repeat(2, 1fr); }
+      .online-visual { grid-template-columns: 1fr; }
+      .online-visual img { max-width: 190px; margin: 0 auto; }
+    }
+
+    @media (max-width: 520px) {
+      .wrap { width: min(100% - 24px, 1100px); }
+      h1 { font-size: 2.55rem; }
+      .tab-panel { padding: 22px 18px; }
+      .evidence-list { grid-template-columns: 1fr; }
+      .hero-cover { border-radius: 20px; }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="wrap">
+    <header class="site-header">
+      <p class="site-title"><a href="../index.html">Science Lite</a></p>
+      <p class="site-tagline">Real science, explained without the jargon.</p>
+    </header>
 
-    <div class="container">
-        <!-- Main Blog Post Structure -->
-        <main>
-            <h1>Demystifying the Flow: How Your Menstrual Cycle Actually Works</h1>
-            
-            <p class="lead-paragraph">
-                The menstrual cycle is a highly coordinated monthly internal communication system between your brain and your reproductive organs. Driven by fluctuating hormones, its primary job is to prepare your body for a potential pregnancy. When pregnancy doesn't happen, the uterus safely sheds its internal lining, creating your period.
-            </p>
+    <main>
+      <a class="back-link" href="../index.html">← All posts</a>
 
+      <article>
+        <span class="tag">Human Biology</span>
+        <h1>Demystifying the Flow: How Your Menstrual Cycle Actually Works</h1>
+        <p class="post-meta">September 2, 2026 · 8 min read</p>
+
+        <div class="hero-cover">
+          <!-- Your uploaded front image -->
+          <img src="assets/menstrual-cycle-cover.png"
+               alt="Illustrated cover showing the uterus and menstrual cycle">
+        </div>
+
+        <p class="lede">
+          The menstrual cycle is a highly coordinated monthly communication system between your brain and your reproductive organs. Driven by fluctuating hormones, its job is to prepare your body for a potential pregnancy. When pregnancy doesn't happen, the uterus safely sheds its lining, creating your period.
+        </p>
+
+        <p>
+          Textbooks love an exact 28-day cycle, but real-world data shows fewer than 25% of people actually have one. A normal cycle can range anywhere from 21 to 35 days, and shifting a few days from month to month can be completely healthy.
+        </p>
+
+        <div class="online-visual">
+          <!-- Online image from Wikimedia Commons. Keep attribution in your sources/footer. -->
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/MenstrualCycle2%20en.svg"
+            alt="Scientific menstrual cycle diagram showing hormonal changes">
+          <div>
+            <strong>A cycle is a connected system</strong>
             <p>
-                While the textbooks always talk about an exact 28-day cycle, real-world data shows that fewer than 25% of individuals actually have a rigid 28-day schedule. A normal cycle can range anywhere from 21 to 35 days, and variations of a few days from month to month are completely healthy.
+              The menstrual cycle is driven by changing hormone levels and coordinated changes in the ovaries and uterus. The illustration here gives readers a scientific visual reference before exploring each phase below.
             </p>
+          </div>
+        </div>
 
-            <p>Let's demystify the cycle by breaking it down into its four distinct phases via our interactive visual overview:</p>
+        <div class="wheel-figure">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The four phases of the menstrual cycle">
+            <circle cx="150" cy="150" r="120" fill="none" stroke="rgba(164,93,119,.20)" stroke-width="2"/>
+            <path d="M150 30 A120 120 0 0 1 245 100 L150 150 Z" fill="#D84F67" opacity="0.82"/>
+            <path d="M245 100 A120 120 0 0 1 245 200 L150 150 Z" fill="#D99A32" opacity="0.82"/>
+            <path d="M245 200 A120 120 0 0 1 205 262 L150 150 Z" fill="#E8759A" opacity="0.86"/>
+            <path d="M205 262 A120 120 0 0 1 150 30 L150 150 Z" fill="#8060B8" opacity="0.82"/>
+            <circle cx="150" cy="150" r="48" fill="rgba(255,255,255,.94)" stroke="rgba(164,93,119,.18)" stroke-width="1"/>
+            <text x="150" y="146" text-anchor="middle" font-family="Newsreader, serif" font-size="14" fill="#352836">Your cycle</text>
+            <text x="150" y="163" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="10" fill="#756878">a repeating system</text>
+            <text x="190" y="65" font-size="10" fill="#352836" font-family="Public Sans, sans-serif">Menstrual</text>
+            <text x="242" y="150" font-size="10" fill="#352836" font-family="Public Sans, sans-serif">Follicular</text>
+            <text x="190" y="245" font-size="10" fill="#352836" font-family="Public Sans, sans-serif">Ovulation</text>
+            <text x="84" y="245" font-size="10" fill="#352836" font-family="Public Sans, sans-serif">Luteal</text>
+          </svg>
+          <figcaption>The four phases of a typical cycle. Lengths vary; this shows the general order rather than fixed dates.</figcaption>
+        </div>
 
-            <!-- Dynamic Interactive Animation Component Context Frame -->
-            <div class="interactive-visual-container">
-                <div class="diagram-stage">
-                    <div id="bioAvatar" class="biological-avatar shedding"></div>
-                </div>
-                <div class="timeline-navigation">
+        <h2>The four phases, tap to explore</h2>
+        <p>Each phase has its own color. Tap a phase to open its details.</p>
+
+        <div class="phase-tabs">
+          <input type="radio" name="phase" id="tab1" checked>
+          <input type="radio" name="phase" id="tab2">
+          <input type="radio" name="phase" id="tab3">
+          <input type="radio" name="phase" id="tab4">
+
+          <div class="tab-labels">
+            <label for="tab1">Menstrual</label>
+            <label for="tab2">Follicular</label>
+            <label for="tab3">Ovulation</label>
+            <label for="tab4">Luteal</label>
+          </div>
+
+          <div class="panels">
+            <section class="tab-panel" id="panel1">
+              <h3>The Menstrual Phase</h3>
+              <p class="days">Days 1 to 5</p>
+              <p>Your cycle officially resets on Day 1, marked by the first day of bleeding.</p>
+              <p><strong>The internal action:</strong> if the previous cycle's egg was not fertilized, estrogen and progesterone drop sharply, telling the uterus it is time to clear its lining.</p>
+              <p><strong>The result:</strong> the uterus sheds its inner lining, the endometrium, a mixture of blood, tissue, and mucus.</p>
+              <p><strong>Why cramps happen:</strong> prostaglandins make the uterine muscles contract to help push the lining out.</p>
+            </section>
+
+            <section class="tab-panel" id="panel2">
+              <h3>The Follicular Phase</h3>
+              <p class="days">Days 1 to 13 · overlaps with menstruation</p>
+              <p><strong>The internal action:</strong> the pituitary gland releases Follicle-Stimulating Hormone (FSH), telling the ovaries to grow follicles containing immature eggs.</p>
+              <p><strong>The result:</strong> maturing follicles produce estrogen, which helps rebuild the uterine lining. One dominant follicle eventually prepares to release its egg.</p>
+            </section>
+
+            <section class="tab-panel" id="panel3">
+              <h3>Ovulation</h3>
+              <p class="days">Around Day 14</p>
+              <p><strong>The internal action:</strong> peak estrogen triggers a sharp surge in Luteinizing Hormone (LH).</p>
+              <p><strong>The result:</strong> the LH surge causes the dominant follicle to rupture and release a mature egg into the fallopian tube.</p>
+              <p><strong>The fertile window:</strong> the egg survives for roughly 12 to 24 hours, while sperm can survive for up to 5 days.</p>
+            </section>
+
+            <section class="tab-panel" id="panel4">
+              <h3>The Luteal Phase</h3>
+              <p class="days">Days 15 to 28</p>
+              <p><strong>The internal action:</strong> the emptied follicle becomes a temporary gland called the corpus luteum, which produces progesterone.</p>
+              <p><strong>The result:</strong> progesterone helps keep the uterine lining thick and stable.</p>
+              <p><strong>The fork in the road:</strong> if pregnancy does not occur, the corpus luteum dissolves, hormone levels fall, and the lining prepares to shed again.</p>
+            </section>
+          </div>
+        </div>
+
+        <h2>Your toolkit: modern period management</h2>
+        <p>Everyone's body and lifestyle are different, so product choices should reflect individual comfort and needs.</p>
+
+        <div class="toolkit-grid">
+          <div class="toolkit-card">
+            <svg viewBox="0 0 40 40" aria-hidden="true">
+              <rect x="8" y="10" width="24" height="20" rx="6" fill="#E8759A" opacity=".82"/>
+              <rect x="8" y="10" width="24" height="20" rx="6" fill="none" stroke="#9A3E61" stroke-width="1.5"/>
+            </svg>
+            <h4>Pads &amp; Liners</h4>
+            <p>Absorbent strips that adhere to underwear for easy external management.</p>
+          </div>
+
+          <div class="toolkit-card">
+            <svg viewBox="0 0 40 40" aria-hidden="true">
+              <rect x="16" y="6" width="8" height="26" rx="4" fill="#D99A32" opacity=".9"/>
+            </svg>
+            <h4>Tampons</h4>
+            <p>Worn internally and typically changed every 4 to 8 hours.</p>
+          </div>
+
+          <div class="toolkit-card">
+            <svg viewBox="0 0 40 40" aria-hidden="true">
+              <path d="M14 10 L26 10 L23 28 Q20 34 17 28 Z" fill="#D84F67" opacity=".85"/>
+            </svg>
+            <h4>Cups &amp; Discs</h4>
+            <p>Reusable products that collect fluid rather than absorbing it.</p>
+          </div>
+
+          <div class="toolkit-card">
+            <svg viewBox="0 0 40 40" aria-hidden="true">
+              <path d="M10 12 h20 v10 q0 10 -10 12 q-10 -2 -10 -12 Z" fill="#8060B8" opacity=".85"/>
+            </svg>
+            <h4>Period Underwear</h4>
+            <p>Specially layered, washable fabric designed to catch and lock in moisture.</p>
+          </div>
+        </div>
+
+        <h2>Sources &amp; further reading</h2>
+        <p>Small source cards with a blurred visual background and fully sharp text.</p>
+
+        <div class="evidence-list">
+          <div class="evidence-item">
+            <strong>Clinical Anatomy and Hormonal Pathways</strong>
+            <span>Clinical background on the hypothalamic-pituitary-ovarian axis and menstrual physiology.</span>
+            <a href="https://www.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">NCBI / NIH →</a>
+          </div>
+
+          <div class="evidence-item">
+            <strong>Cycle Length and Demographic Variations</strong>
+            <span>Research and population-level information about how cycle length can vary.</span>
+            <a href="https://www.hsph.harvard.edu/apple-womens-health-study/" target="_blank" rel="noopener">Harvard Apple Women's Health Study →</a>
+          </div>
+
+          <div class="evidence-item">
+            <strong>Public Health Overview</strong>
+            <span>Patient-centered information about periods, symptoms, and menstrual health.</span>
+            <a href="https://womenshealth.gov/menstrual-cycle" target="_blank" rel="noopener">Office on Women's Health →</a>
+          </div>
+
+          <div class="evidence-item">
+            <strong>Scientific Cycle Diagram</strong>
+            <span>Visual reference used in this article's online illustration.</span>
+            <a href="https://commons.wikimedia.org/wiki/File:MenstrualCycle2_en.svg" target="_blank" rel="noopener">Wikimedia Commons · CC BY-SA →</a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      Made by Feha Bin Ali · Science Lite
+    </footer>
+  </div>
+</body>
+</html>
