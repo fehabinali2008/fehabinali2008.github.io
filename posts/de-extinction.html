@@ -1,0 +1,2214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Can Scientists Bring Extinct Animals Back to Life? | Science Lite</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --bg-dark: #071116;
+      --bg-mid: #0c2027;
+      --bg-teal: #10363b;
+
+      --ink: #edf5f2;
+      --ink-soft: #a9bbb8;
+
+      --gold: #d9a85b;
+      --gold-soft: #e8c985;
+
+      --cyan: #79c7c0;
+
+      --glass: rgba(16, 35, 40, 0.68);
+      --glass-light: rgba(255,255,255,0.055);
+
+      --line: rgba(220, 231, 226, 0.13);
+
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Public Sans", Arial, sans-serif;
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      margin: 0;
+
+      color: var(--ink);
+
+      font-family: var(--sans);
+
+      line-height: 1.8;
+
+      -webkit-font-smoothing: antialiased;
+
+      min-height: 100vh;
+
+      background:
+        radial-gradient(
+          circle at 8% 4%,
+          rgba(55, 143, 142, 0.25),
+          transparent 27rem
+        ),
+
+        radial-gradient(
+          circle at 92% 15%,
+          rgba(210, 161, 83, 0.18),
+          transparent 30rem
+        ),
+
+        radial-gradient(
+          circle at 48% 55%,
+          rgba(24, 102, 107, 0.22),
+          transparent 34rem
+        ),
+
+        radial-gradient(
+          circle at 18% 95%,
+          rgba(65, 116, 111, 0.18),
+          transparent 28rem
+        ),
+
+        linear-gradient(
+          135deg,
+          #050d11 0%,
+          #07171d 35%,
+          #0a252b 68%,
+          #08161b 100%
+        );
+
+      background-attachment: fixed;
+    }
+
+
+    /* subtle scientific texture */
+
+    body::before {
+      content: "";
+
+      position: fixed;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      opacity: 0.18;
+
+      background-image:
+        radial-gradient(
+          rgba(220, 231, 226, 0.18) 1px,
+          transparent 1px
+        );
+
+      background-size: 25px 25px;
+
+      mask-image:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,.7),
+          transparent 75%
+        );
+    }
+
+
+    .wrap {
+      width: min(1100px, calc(100% - 36px));
+
+      margin: 0 auto;
+    }
+
+
+    /* HEADER */
+
+    .site-header {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding: 26px 0;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+
+    .site-title {
+      margin: 0;
+
+      font-family: var(--serif);
+
+      font-size: 1.65rem;
+
+      font-weight: 700;
+
+      letter-spacing: -0.02em;
+    }
+
+
+    .site-title a {
+      color: var(--ink);
+
+      text-decoration: none;
+    }
+
+
+    .site-tagline {
+
+      margin: 0;
+
+      color: var(--ink-soft);
+
+      font-size: .88rem;
+
+      text-align: right;
+    }
+
+
+    .back-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      margin: 28px 0 22px;
+
+      color: var(--gold-soft);
+
+      text-decoration: none;
+
+      font-size: .9rem;
+
+      font-weight: 600;
+    }
+
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+
+    article {
+      padding-bottom: 80px;
+    }
+
+
+    /* TAG */
+
+    .tag {
+
+      display: inline-block;
+
+      padding: 6px 14px;
+
+      border: 1px solid rgba(217,168,91,.28);
+
+      border-radius: 999px;
+
+      background: rgba(217,168,91,.08);
+
+      color: var(--gold-soft);
+
+      font-size: .75rem;
+
+      font-weight: 700;
+
+      letter-spacing: .07em;
+
+      text-transform: uppercase;
+    }
+
+
+    /* HEADINGS */
+
+    h1,
+    h2,
+    h3,
+    h4 {
+
+      font-family: var(--serif);
+
+      color: var(--ink);
+    }
+
+
+    h1 {
+
+      max-width: 900px;
+
+      margin: 17px 0 13px;
+
+      font-size: clamp(
+        2.5rem,
+        6vw,
+        4.7rem
+      );
+
+      line-height: .98;
+
+      letter-spacing: -.045em;
+    }
+
+
+    h2 {
+
+      margin: 68px 0 15px;
+
+      font-size: clamp(
+        1.85rem,
+        4vw,
+        2.55rem
+      );
+
+      line-height: 1.08;
+
+      letter-spacing: -.025em;
+    }
+
+
+    h3 {
+
+      margin: 0 0 8px;
+
+      font-size: 1.55rem;
+
+      line-height: 1.15;
+    }
+
+
+    .post-meta {
+
+      margin: 0 0 28px;
+
+      color: var(--ink-soft);
+
+      font-size: .86rem;
+    }
+
+
+    .lede {
+
+      max-width: 76ch;
+
+      margin: 0 0 18px;
+
+      font-size: 1.13rem;
+
+      color: #dce8e5;
+
+      font-weight: 500;
+    }
+
+
+    article > p:not(.lede):not(.post-meta) {
+
+      max-width: 76ch;
+
+      color: #bdcdca;
+
+      font-size: 1rem;
+    }
+
+
+    strong {
+      color: #f2f7f5;
+    }
+
+
+    /* HERO */
+
+    .hero-cover {
+
+      position: relative;
+
+      overflow: hidden;
+
+      margin: 32px 0 36px;
+
+      border-radius: 30px;
+
+      border: 1px solid rgba(255,255,255,.11);
+
+      background: #09161a;
+
+      box-shadow:
+        0 30px 90px rgba(0,0,0,.38);
+    }
+
+
+    .hero-cover img {
+
+      display: block;
+
+      width: 100%;
+
+      aspect-ratio: 16 / 9;
+
+      object-fit: cover;
+
+      filter: saturate(.92) contrast(1.04);
+    }
+
+
+    .hero-cover::after {
+
+      content: "SCIENCE LITE";
+
+      position: absolute;
+
+      right: 18px;
+
+      bottom: 15px;
+
+      padding: 6px 12px;
+
+      border-radius: 999px;
+
+      background: rgba(4,13,16,.62);
+
+      color: rgba(240,247,244,.8);
+
+      backdrop-filter: blur(14px);
+
+      font-size: .7rem;
+
+      font-weight: 700;
+
+      letter-spacing: .08em;
+    }
+
+
+    /* IMAGE BLOCK */
+
+    .visual {
+
+      margin: 38px 0;
+
+      overflow: hidden;
+
+      border-radius: 26px;
+
+      border: 1px solid rgba(255,255,255,.10);
+
+      background: var(--glass);
+
+      box-shadow:
+        0 22px 65px rgba(0,0,0,.28);
+
+      backdrop-filter: blur(18px);
+    }
+
+
+    .visual img {
+
+      display: block;
+
+      width: 100%;
+
+      aspect-ratio: 16 / 9;
+
+      object-fit: cover;
+    }
+
+
+    .visual figcaption {
+
+      padding: 14px 18px;
+
+      color: var(--ink-soft);
+
+      font-size: .78rem;
+
+      line-height: 1.55;
+    }
+
+
+    /* SIDE BY SIDE IMAGES */
+
+    .image-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 16px;
+
+      margin: 32px 0;
+    }
+
+
+    .image-card {
+
+      overflow: hidden;
+
+      border-radius: 24px;
+
+      border: 1px solid rgba(255,255,255,.10);
+
+      background: rgba(255,255,255,.045);
+
+      box-shadow:
+        0 18px 50px rgba(0,0,0,.22);
+    }
+
+
+    .image-card img {
+
+      width: 100%;
+
+      display: block;
+
+      aspect-ratio: 4 / 3;
+
+      object-fit: cover;
+    }
+
+
+    .image-card p {
+
+      margin: 0;
+
+      padding: 12px 15px;
+
+      color: var(--ink-soft);
+
+      font-size: .78rem;
+    }
+
+
+    /* VIDEO */
+
+    .video-card {
+
+      margin: 42px 0;
+
+      padding: 12px;
+
+      border-radius: 27px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(217,168,91,.12),
+          rgba(67,151,148,.09)
+        );
+
+      border: 1px solid rgba(255,255,255,.10);
+
+      box-shadow:
+        0 25px 65px rgba(0,0,0,.28);
+    }
+
+
+    .video-frame {
+
+      position: relative;
+
+      overflow: hidden;
+
+      border-radius: 19px;
+
+      aspect-ratio: 16 / 9;
+
+      background: #030708;
+    }
+
+
+    .video-frame iframe {
+
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      border: 0;
+    }
+
+
+    .video-caption {
+
+      padding: 12px 8px 3px;
+
+      color: var(--ink-soft);
+
+      font-size: .78rem;
+    }
+
+
+    /* FACT CARD */
+
+    .fact-card {
+
+      position: relative;
+
+      margin: 38px 0;
+
+      padding: 28px 30px;
+
+      overflow: hidden;
+
+      border-radius: 26px;
+
+      border: 1px solid rgba(217,168,91,.22);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(217,168,91,.12),
+          rgba(255,255,255,.035)
+        );
+
+      box-shadow:
+        0 22px 55px rgba(0,0,0,.23);
+    }
+
+
+    .fact-card::before {
+
+      content: "✦";
+
+      position: absolute;
+
+      right: 25px;
+
+      top: 12px;
+
+      color: rgba(217,168,91,.3);
+
+      font-size: 4rem;
+
+      font-family: var(--serif);
+    }
+
+
+    .fact-card .label {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: var(--gold-soft);
+
+      font-size: .72rem;
+
+      font-weight: 700;
+
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+    }
+
+
+    .fact-card p {
+
+      max-width: 70ch;
+
+      margin: 0;
+
+      color: #d8e4e1;
+
+      font-size: 1.03rem;
+    }
+
+
+    /* PULL QUOTE */
+
+    .pullquote {
+
+      margin: 48px 0;
+
+      padding: 28px 30px;
+
+      border-left: 3px solid var(--gold);
+
+      color: #e6efec;
+
+      font-family: var(--serif);
+
+      font-size: clamp(
+        1.35rem,
+        3vw,
+        1.8rem
+      );
+
+      line-height: 1.35;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(217,168,91,.09),
+          transparent
+        );
+    }
+
+
+    /* TIMELINE */
+
+    .timeline {
+
+      margin: 38px 0;
+
+      display: grid;
+
+      gap: 14px;
+    }
+
+
+    .timeline-item {
+
+      display: grid;
+
+      grid-template-columns: 60px 1fr;
+
+      gap: 17px;
+
+      padding: 20px;
+
+      border-radius: 22px;
+
+      border: 1px solid rgba(255,255,255,.08);
+
+      background: rgba(255,255,255,.045);
+    }
+
+
+    .timeline-number {
+
+      display: grid;
+
+      place-items: center;
+
+      width: 46px;
+
+      height: 46px;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(217,168,91,.25),
+          rgba(75,158,153,.20)
+        );
+
+      border: 1px solid rgba(217,168,91,.25);
+
+      color: var(--gold-soft);
+
+      font-weight: 700;
+    }
+
+
+    .timeline-item h3 {
+
+      margin: 0 0 4px;
+
+      font-size: 1.2rem;
+    }
+
+
+    .timeline-item p {
+
+      margin: 0;
+
+      color: var(--ink-soft);
+
+      font-size: .9rem;
+    }
+
+
+    /* DE-EXTINCTION FLOW */
+
+    .flow {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(5, 1fr);
+
+      gap: 10px;
+
+      margin: 35px 0;
+    }
+
+
+    .flow-card {
+
+      min-height: 150px;
+
+      padding: 18px 13px;
+
+      text-align: center;
+
+      border-radius: 21px;
+
+      border: 1px solid rgba(255,255,255,.09);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.065),
+          rgba(255,255,255,.025)
+        );
+    }
+
+
+    .flow-card span {
+
+      display: grid;
+
+      place-items: center;
+
+      width: 38px;
+
+      height: 38px;
+
+      margin: 0 auto 10px;
+
+      border-radius: 50%;
+
+      background: rgba(217,168,91,.13);
+
+      color: var(--gold-soft);
+
+      font-weight: 700;
+    }
+
+
+    .flow-card strong {
+
+      display: block;
+
+      font-size: .82rem;
+
+      line-height: 1.3;
+    }
+
+
+    .flow-card small {
+
+      display: block;
+
+      margin-top: 7px;
+
+      color: var(--ink-soft);
+
+      font-size: .7rem;
+
+      line-height: 1.4;
+    }
+
+
+    /* SOURCE CARDS */
+
+    .sources {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 13px;
+
+      margin: 25px 0;
+    }
+
+
+    .source-card {
+
+      padding: 18px;
+
+      border-radius: 20px;
+
+      border: 1px solid rgba(255,255,255,.08);
+
+      background:
+        rgba(255,255,255,.04);
+
+      transition:
+        transform .2s ease,
+        border-color .2s ease;
+    }
+
+
+    .source-card:hover {
+
+      transform: translateY(-3px);
+
+      border-color: rgba(217,168,91,.3);
+    }
+
+
+    .source-card strong {
+
+      display: block;
+
+      margin-bottom: 6px;
+
+      font-size: .87rem;
+
+      line-height: 1.4;
+    }
+
+
+    .source-card span {
+
+      display: block;
+
+      margin-bottom: 10px;
+
+      color: var(--ink-soft);
+
+      font-size: .74rem;
+
+      line-height: 1.5;
+    }
+
+
+    .source-card a {
+
+      color: var(--gold-soft);
+
+      text-decoration: none;
+
+      font-size: .76rem;
+
+      font-weight: 700;
+    }
+
+
+    .source-card a:hover {
+
+      text-decoration: underline;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+
+      padding: 30px 0 40px;
+
+      border-top: 1px solid var(--line);
+
+      color: var(--ink-soft);
+
+      font-size: .82rem;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .flow {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .site-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+      }
+
+
+      .site-tagline {
+
+        text-align: left;
+      }
+
+
+      .image-grid {
+
+        grid-template-columns: 1fr;
+      }
+
+
+      .sources {
+
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 520px) {
+
+      .wrap {
+
+        width: min(
+          100% - 24px,
+          1100px
+        );
+      }
+
+
+      h1 {
+
+        font-size: 2.6rem;
+      }
+
+
+      .hero-cover {
+
+        border-radius: 21px;
+      }
+
+
+      .fact-card {
+
+        padding: 23px 21px;
+      }
+
+
+      .timeline-item {
+
+        grid-template-columns: 46px 1fr;
+      }
+
+
+      .flow {
+
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <p class="site-title">
+      <a href="../index.html">
+        Science Lite
+      </a>
+    </p>
+
+    <p class="site-tagline">
+      Real science, explained without the jargon.
+    </p>
+
+  </header>
+
+
+  <main>
+
+    <a class="back-link" href="../index.html">
+      ← All posts
+    </a>
+
+
+    <article>
+
+      <!-- ARTICLE INTRO -->
+
+      <span class="tag">
+        Genetics · Evolution · De-extinction
+      </span>
+
+
+      <h1>
+        Can Scientists Bring Extinct Animals Back to Life?
+      </h1>
+
+
+      <p class="post-meta">
+        September 23, 2026 · 12 min read
+      </p>
+
+
+      <!-- HERO IMAGE -->
+
+      <figure class="hero-cover">
+
+        <!-- Replace with your own image -->
+
+        <img
+          src="../assets/mammoth-hero.jpg"
+          alt="Woolly mammoth walking across an ancient frozen landscape"
+        >
+
+      </figure>
+
+
+      <p class="lede">
+
+        Imagine walking across a frozen landscape and seeing a woolly
+        mammoth moving through the snow. For thousands of years, that
+        scene belonged only to the past. Today, advances in ancient DNA,
+        genome sequencing, gene editing and stem-cell biology are making
+        something that once sounded like science fiction a serious
+        scientific question.
+
+      </p>
+
+
+      <p>
+
+        But there is an important distinction between bringing an extinct
+        animal back and creating an animal that carries some of its
+        extinct traits.
+
+        Scientists cannot currently take a perfectly preserved mammoth
+        genome and simply clone an identical mammoth. Ancient DNA is
+        fragmented and damaged, and no living mammoth cells remain.
+
+        Instead, researchers are investigating whether genetic information
+        recovered from extinct species can be combined with modern
+        biotechnology and the biology of living relatives.
+
+      </p>
+
+
+      <!-- FACT -->
+
+      <div class="fact-card">
+
+        <span class="label">
+          The short answer
+        </span>
+
+        <p>
+
+          Scientists have not yet recreated a genetically identical extinct
+          animal. What they are developing is a much more complicated
+          approach: reconstructing selected extinct traits using ancient
+          DNA, living relatives and genome engineering.
+
+        </p>
+
+      </div>
+
+
+      <!-- VIDEO -->
+
+      <div class="video-card">
+
+        <div class="video-frame">
+
+          <!-- Replace VIDEO_ID with a suitable YouTube video ID -->
+
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="De-extinction and ancient DNA"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+        <div class="video-caption">
+
+          Visual explainer: ancient DNA, mammoths and the science of
+          de-extinction.
+
+        </div>
+
+      </div>
+
+
+      <!-- SECTION 1 -->
+
+      <h2>
+        De-extinction: Are We Really Bringing the Dead Back?
+      </h2>
+
+
+      <p>
+
+        The idea is usually described with one dramatic word:
+        <strong>de-extinction.</strong>
+
+        The term refers to attempts to recreate extinct organisms or
+        restore important characteristics of extinct species using modern
+        biotechnology.
+
+      </p>
+
+
+      <p>
+
+        The woolly mammoth is one of the most famous examples because
+        mammoths left behind unusually well-preserved remains in
+        permafrost. These remains have allowed scientists to recover
+        genetic material and investigate how mammoths adapted to extreme
+        Arctic environments.
+
+      </p>
+
+
+      <figure class="visual">
+
+        <img
+          src="../assets/mammoth-fossil.jpg"
+          alt="Preserved woolly mammoth remains in permafrost"
+          loading="lazy"
+        >
+
+        <figcaption>
+
+          Mammoth remains preserved in cold environments provide valuable
+          genetic information about an extinct species.
+
+        </figcaption>
+
+      </figure>
+
+
+      <!-- SECTION 2 -->
+
+      <h2>
+        A Mammoth Is More Than Its DNA
+      </h2>
+
+
+      <p>
+
+        The woolly mammoth was closely related to the modern Asian
+        elephant. That evolutionary relationship is extremely important
+        because scientists need a living biological system if they want
+        to investigate whether extinct genetic traits can be recreated.
+
+      </p>
+
+
+      <p>
+
+        By comparing mammoth genomes with elephant genomes, researchers
+        can identify genetic differences associated with characteristics
+        such as hair, skin, fat metabolism, immunity and adaptation to
+        cold environments.
+
+      </p>
+
+
+      <div class="image-grid">
+
+        <div class="image-card">
+
+          <img
+            src="../assets/mammoth-elephant-comparison.jpg"
+            alt="Comparison of woolly mammoth and modern elephant"
+            loading="lazy"
+          >
+
+          <p>
+            Mammoth and elephant evolutionary relationship.
+          </p>
+
+        </div>
+
+
+        <div class="image-card">
+
+          <img
+            src="../assets/ancient-dna.jpg"
+            alt="Ancient DNA research visualization"
+            loading="lazy"
+          >
+
+          <p>
+            Ancient DNA provides a genetic window into extinct species.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="pullquote">
+
+        A genome is not an instruction manual that automatically produces
+        an animal. Development depends on genes, cells, regulatory
+        systems, reproduction and the environment working together.
+
+      </div>
+
+
+      <!-- SECTION 3 -->
+
+      <h2>
+        How Could Scientists Create a Mammoth-Like Animal?
+      </h2>
+
+
+      <p>
+
+        The process involves several major scientific challenges. Each
+        step takes researchers further away from simply studying an
+        extinct animal and closer to attempting to reproduce selected
+        biological characteristics.
+
+      </p>
+
+
+      <div class="flow">
+
+        <div class="flow-card">
+
+          <span>1</span>
+
+          <strong>
+            Recover DNA
+          </strong>
+
+          <small>
+            Sequence genetic fragments from ancient remains.
+          </small>
+
+        </div>
+
+
+        <div class="flow-card">
+
+          <span>2</span>
+
+          <strong>
+            Compare Genomes
+          </strong>
+
+          <small>
+            Compare extinct and living relatives.
+          </small>
+
+        </div>
+
+
+        <div class="flow-card">
+
+          <span>3</span>
+
+          <strong>
+            Edit Cells
+          </strong>
+
+          <small>
+            Introduce selected genetic changes.
+          </small>
+
+        </div>
+
+
+        <div class="flow-card">
+
+          <span>4</span>
+
+          <strong>
+            Create Embryo
+          </strong>
+
+          <small>
+            Develop viable reproductive systems.
+          </small>
+
+        </div>
+
+
+        <div class="flow-card">
+
+          <span>5</span>
+
+          <strong>
+            Healthy Animal
+          </strong>
+
+          <small>
+            The biggest biological challenge.
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <!-- STEP 1 -->
+
+      <h2>
+        Step 1: Recover Ancient DNA
+      </h2>
+
+
+      <p>
+
+        The first requirement is genetic information.
+
+        Mammoths are particularly valuable to researchers because some
+        specimens were preserved in extremely cold environments. Scientists
+        have recovered DNA from these remains and used modern sequencing
+        technologies to reconstruct increasingly detailed mammoth genomes.
+
+      </p>
+
+
+      <p>
+
+        Ancient DNA is not normally found as one perfect biological
+        blueprint. Instead, it exists as millions of damaged fragments.
+        Scientists use sequencing and computational methods to reconstruct
+        the genome from these fragments.
+
+      </p>
+
+
+      <!-- IMAGE -->
+
+      <figure class="visual">
+
+        <img
+          src="../assets/ancient-dna.jpg"
+          alt="Ancient DNA sequencing laboratory"
+          loading="lazy"
+        >
+
+        <figcaption>
+
+          Ancient DNA is fragmented and chemically damaged, making genome
+          reconstruction a major computational and biological challenge.
+
+        </figcaption>
+
+      </figure>
+
+
+      <!-- STEP 2 -->
+
+      <h2>
+        Step 2: Compare the Mammoth With a Living Relative
+      </h2>
+
+
+      <p>
+
+        Once scientists have genetic information from the extinct species,
+        they can compare it with the genome of a living relative.
+
+        For mammoths, the Asian elephant is particularly important.
+
+      </p>
+
+
+      <p>
+
+        Researchers can search for genetic differences associated with
+        mammoth adaptations. These include changes potentially connected
+        to hair, fat storage, temperature regulation and other biological
+        characteristics.
+
+      </p>
+
+
+      <!-- VIDEO -->
+
+      <div class="video-card">
+
+        <div class="video-frame">
+
+          <!-- Replace VIDEO_ID with a real educational video -->
+
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Mammoth genome and elephant genetics"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+        <div class="video-caption">
+
+          Suggested video placement: mammoth genome sequencing or
+          mammoth-elephant evolution.
+
+        </div>
+
+      </div>
+
+
+      <!-- STEP 3 -->
+
+      <h2>
+        Step 3: Edit Living Cells
+      </h2>
+
+
+      <p>
+
+        This is where genome-editing technologies such as CRISPR become
+        important.
+
+      </p>
+
+
+      <p>
+
+        CRISPR allows researchers to make targeted changes to DNA.
+        In principle, scientists can modify cells from a living relative
+        and introduce selected sequences inspired by an extinct species.
+
+      </p>
+
+
+      <p>
+
+        Experimental research has already explored editing elephant cells
+        with mammoth-associated genetic sequences. But editing a cell is
+        very different from producing an entire animal.
+
+      </p>
+
+
+      <figure class="visual">
+
+        <img
+          src="../assets/crispr-gene-editing.jpg"
+          alt="CRISPR gene editing scientific illustration"
+          loading="lazy"
+        >
+
+        <figcaption>
+
+          Genome editing allows scientists to make targeted changes to
+          DNA, but producing a complete animal requires many additional
+          biological steps.
+
+        </figcaption>
+
+      </figure>
+
+
+      <!-- STEP 4 -->
+
+      <h2>
+        Step 4: From Edited Cell to Embryo
+      </h2>
+
+
+      <p>
+
+        This may be one of the hardest stages.
+
+        Suppose scientists successfully modify an elephant cell so that
+        several of its genes resemble mammoth versions.
+
+        That still does not create a mammoth.
+
+      </p>
+
+
+      <p>
+
+        Researchers would need to turn the edited genetic material into
+        a viable embryo and allow that embryo to develop successfully.
+
+        This brings reproductive biology, embryology and stem-cell
+        research into the picture.
+
+      </p>
+
+
+      <div class="fact-card">
+
+        <span class="label">
+          The huge biological gap
+        </span>
+
+        <p>
+
+          Changing DNA is one problem. Turning a genetically modified cell
+          into a healthy, developing animal is an entirely different
+          problem.
+
+        </p>
+
+      </div>
+
+
+      <!-- SECTION 5 -->
+
+      <h2>
+        But Would It Actually Be a Woolly Mammoth?
+      </h2>
+
+
+      <p>
+
+        This is where the definition of "de-extinction" becomes important.
+
+        Imagine researchers create an elephant carrying dozens of
+        carefully selected mammoth-associated genetic changes.
+
+        Would that animal actually be a woolly mammoth?
+
+      </p>
+
+
+      <p>
+
+        Not necessarily.
+
+        It might be better described as a genetically engineered elephant
+        or a <strong>mammoth proxy</strong> that reproduces selected
+        characteristics of the extinct species.
+
+      </p>
+
+
+      <p>
+
+        The animal would not necessarily possess every genetic feature
+        found in an extinct mammoth. It would also develop within a
+        modern biological and environmental context.
+
+      </p>
+
+
+      <div class="pullquote">
+
+        De-extinction may not mean recreating the past perfectly.
+        It may mean reconstructing selected biological traits that
+        disappeared with it.
+
+      </div>
+
+
+      <!-- WOOLLY MOUSE -->
+
+      <h2>
+        The "Woolly Mouse" Experiment
+      </h2>
+
+
+      <p>
+
+        In 2025, researchers associated with Colossal reported genetically
+        engineered mice carrying multiple genetic changes associated with
+        mammoth-like characteristics.
+
+        The resulting mice developed noticeably hairier coats.
+
+      </p>
+
+
+      <p>
+
+        The experiment attracted attention because it demonstrated how
+        combinations of genetic changes can influence physical traits.
+
+        But a woolly mouse is not a mammoth.
+
+      </p>
+
+
+      <figure class="visual">
+
+        <img
+          src="../assets/woolly-mouse.jpg"
+          alt="Genetically engineered woolly mouse research"
+          loading="lazy"
+        >
+
+        <figcaption>
+
+          Genetically engineered mice can help researchers investigate
+          how combinations of genes influence traits associated with
+          extinct species.
+
+        </figcaption>
+
+      </figure>
+
+
+      <!-- OTHER SPECIES -->
+
+      <h2>
+        What About the Dodo and Tasmanian Tiger?
+      </h2>
+
+
+      <p>
+
+        Mammoths are not the only extinct animals being discussed in
+        de-extinction research.
+
+        The dodo and the thylacine, commonly known as the Tasmanian tiger,
+        are two other frequently discussed examples.
+
+      </p>
+
+
+      <div class="image-grid">
+
+        <div class="image-card">
+
+          <img
+            src="../assets/dodo.jpg"
+            alt="Historical illustration of a dodo"
+            loading="lazy"
+          >
+
+          <p>
+            The dodo is one of the species frequently discussed in
+            de-extinction research.
+          </p>
+
+        </div>
+
+
+        <div class="image-card">
+
+          <img
+            src="../assets/thylacine.jpg"
+            alt="Thylacine Tasmanian tiger"
+            loading="lazy"
+          >
+
+          <p>
+            The thylacine is another major target of modern
+            de-extinction research.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <p>
+
+        Each extinct species creates a different scientific problem.
+
+        Researchers need ancient genetic information, a suitable living
+        relative, appropriate reproductive biology and a realistic way
+        to translate genetic information into a functioning organism.
+
+      </p>
+
+
+      <!-- CONSERVATION -->
+
+      <h2>
+        Could De-extinction Help Conservation?
+      </h2>
+
+
+      <p>
+
+        Perhaps the most important consequence of this technology may not
+        be resurrecting extinct animals at all.
+
+      </p>
+
+
+      <p>
+
+        The same advances in genome sequencing, gene editing and
+        reproductive biology could potentially contribute to conservation
+        of species that are still alive.
+
+      </p>
+
+
+      <p>
+
+        Scientists are investigating whether genomic technologies could
+        help restore genetic diversity, understand disease resistance or
+        improve resilience in endangered populations.
+
+      </p>
+
+
+      <figure class="visual">
+
+        <img
+          src="../assets/mammoth-landscape.jpg"
+          alt="Arctic landscape representing mammoth habitat"
+          loading="lazy"
+        >
+
+        <figcaption>
+
+          The ecological question is just as important as the genetic
+          question: where would a recreated animal actually live?
+
+        </figcaption>
+
+      </figure>
+
+
+      <!-- ECOLOGY -->
+
+      <h2>
+        Where Would a Resurrected Animal Actually Live?
+      </h2>
+
+
+      <p>
+
+        Imagine that scientists eventually create a healthy mammoth-like
+        animal.
+
+        The next question would be where to put it.
+
+      </p>
+
+
+      <p>
+
+        The world has changed dramatically since mammoths disappeared.
+        Climate, vegetation, ecosystems and human activity are all
+        different.
+
+      </p>
+
+
+      <p>
+
+        Introducing a large engineered animal into a modern ecosystem
+        could have consequences that scientists cannot completely predict.
+
+        Creating the animal would therefore be only the beginning.
+
+      </p>
+
+
+      <!-- ETHICS -->
+
+      <h2>
+        And Then Comes the Ethical Question
+      </h2>
+
+
+      <p>
+
+        De-extinction is not purely a genetics problem.
+
+        It also raises questions about animal welfare, conservation
+        priorities, ecological risk and how humans should use powerful
+        biological technologies.
+
+      </p>
+
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <div class="timeline-number">
+            ?
+          </div>
+
+          <div>
+
+            <h3>
+              Should extinct species be restored?
+            </h3>
+
+            <p>
+              Especially when the original ecosystem no longer exists?
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-number">
+            ?
+          </div>
+
+          <div>
+
+            <h3>
+              Could resources be better spent elsewhere?
+            </h3>
+
+            <p>
+              For example, protecting species that are currently
+              endangered.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-number">
+            ?
+          </div>
+
+          <div>
+
+            <h3>
+              What happens to the animals themselves?
+            </h3>
+
+            <p>
+              A successful experiment would create living animals that
+              deserve appropriate welfare and long-term care.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- OVERALL VIEW -->
+
+      <h2>
+        Overall View
+      </h2>
+
+
+      <p>
+
+        Scientists have already achieved several pieces of the
+        technological puzzle.
+
+        Ancient DNA can be recovered and sequenced. Extinct genomes can
+        be compared with those of living relatives. Genetic differences
+        associated with extinct traits can be identified. Genome-editing
+        technologies can modify living cells. Stem-cell research is
+        opening new possibilities in reproductive biology.
+
+      </p>
+
+
+      <p>
+
+        But none of this means that scientists have recreated a
+        genetically identical woolly mammoth.
+
+      </p>
+
+
+      <p>
+
+        The real challenge is connecting every stage:
+
+        <strong>
+          ancient DNA → reconstructed genome → edited cells → viable
+          embryo → healthy animal → functioning ecosystem.
+        </strong>
+
+      </p>
+
+
+      <p>
+
+        That is why de-extinction is much more scientifically interesting
+        than simply asking whether scientists can "bring a mammoth back."
+
+      </p>
+
+
+      <p>
+
+        It is a test of how deeply we now understand genetics, evolution,
+        development and ecosystems.
+
+      </p>
+
+
+      <div class="fact-card">
+
+        <span class="label">
+          The bigger picture
+        </span>
+
+        <p>
+
+          Perhaps the most valuable outcome of de-extinction will not be
+          seeing a mammoth walk across Siberia again. It may be learning
+          enough from extinct genomes to help prevent today's endangered
+          animals from becoming tomorrow's extinct species.
+
+        </p>
+
+      </div>
+
+
+      <!-- FINAL VIDEO -->
+
+      <div class="video-card">
+
+        <div class="video-frame">
+
+          <!-- Replace VIDEO_ID with a credible educational/scientific video -->
+
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="The science of de-extinction"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+        <div class="video-caption">
+
+          Further viewing: the science, possibilities and limitations of
+          de-extinction.
+
+        </div>
+
+      </div>
+
+
+      <!-- SOURCES -->
+
+      <h2>
+        Scientific Papers &amp; Further Reading
+      </h2>
+
+
+      <p>
+
+        The article above is based on published scientific literature,
+        scientific reporting and conservation resources. The sources
+        below are included so readers can explore the research themselves.
+
+      </p>
+
+
+      <div class="sources">
+
+
+        <div class="source-card">
+
+          <strong>
+            Elephantid Genomes Reveal the Molecular Bases of Woolly
+            Mammoth Adaptations to the Arctic
+          </strong>
+
+          <span>
+            Cell Reports · Research on mammoth and elephant genomes and
+            Arctic adaptations.
+          </span>
+
+          <a
+            href="https://www.sciencedirect.com/science/article/pii/S2211124715006397"
+            target="_blank"
+            rel="noopener"
+          >
+            Read research →
+          </a>
+
+        </div>
+
+
+        <div class="source-card">
+
+          <strong>
+            Mammoth 2.0: Will Genome Engineering Resurrect Extinct Species?
+          </strong>
+
+          <span>
+            Genome Biology · Discussion of genome engineering and
+            de-extinction.
+          </span>
+
+          <a
+            href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4632474/"
+            target="_blank"
+            rel="noopener"
+          >
+            Read paper →
+          </a>
+
+        </div>
+
+
+        <div class="source-card">
+
+          <strong>
+            Temporal dynamics of woolly mammoth genome erosion prior to
+            extinction
+          </strong>
+
+          <span>
+            Cell · Genomic analysis of mammoth populations and genetic
+            changes before extinction.
+          </span>
+
+          <a
+            href="https://www.sciencedirect.com/science/article/pii/S0092867424005774"
+            target="_blank"
+            rel="noopener"
+          >
+            Read research →
+          </a>
+
+        </div>
+
+
+        <div class="source-card">
+
+          <strong>
+            Genomics of adaptive evolution in the woolly mammoth
+          </strong>
+
+          <span>
+            Current Biology · Mammoth adaptations involving hair, skin,
+            metabolism and immunity.
+          </span>
+
+          <a
+            href="https://www.sciencedirect.com/science/article/pii/S0960982223004049"
+            target="_blank"
+            rel="noopener"
+          >
+            Read research →
+          </a>
+
+        </div>
+
+
+        <div class="source-card">
+
+          <strong>
+            Will these reprogrammed elephant cells ever make a mammoth?
+          </strong>
+
+          <span>
+            Nature · Discussion of elephant cells, reprogramming and the
+            challenges of mammoth reconstruction.
+          </span>
+
+          <a
+            href="https://www.nature.com/articles/d41586-024-00670-z"
+            target="_blank"
+            rel="noopener"
+          >
+            Read article →
+          </a>
+
+        </div>
+
+
+        <div class="source-card">
+
+          <strong>
+            Nature: The "woolly mouse" experiment
+          </strong>
+
+          <span>
+            Scientific discussion of genetically engineered mice carrying
+            mammoth-associated traits.
+          </span>
+
+          <a
+            href="https://www.nature.com/articles/d41586-025-00684-1"
+            target="_blank"
+            rel="noopener"
+          >
+            Read article →
+          </a>
+
+        </div>
+
+
+        <div class="source-card">
+
+          <strong>
+            Nature Biotechnology: De-extinction research
+          </strong>
+
+          <span>
+            Overview of current research involving mammoths, dodos and
+            thylacines.
+          </span>
+
+          <a
+            href="https://www.nature.com/articles/s41587-025-02578-z"
+            target="_blank"
+            rel="noopener"
+          >
+            Read article →
+          </a>
+
+        </div>
+
+
+        <div class="source-card">
+
+          <strong>
+            IUCN Conservation Translocation Specialist Group
+          </strong>
+
+          <span>
+            Conservation guidance relevant to reintroduction, restoration
+            and ecological management.
+          </span>
+
+          <a
+            href="https://iucn.org/our-union/commissions/group/iucn-ssc-conservation-translocation-specialist-group"
+            target="_blank"
+            rel="noopener"
+          >
+            Explore resource →
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </article>
+
+  </main>
+
+
+  <footer>
+
+    Made by Feha Bin Ali · Science Lite
+
+  </footer>
+
+
+</div>
+
+</body>
+</html>
