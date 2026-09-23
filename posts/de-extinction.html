@@ -6,10 +6,18 @@
 
   <title>Can Scientists Bring Extinct Animals Back to Life? | Science Lite</title>
 
+  <meta
+    name="description"
+    content="Can extinct animals really be brought back to life? Explore ancient DNA, CRISPR, mammoths, woolly mice, dodos, thylacines and the science of de-extinction."
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
 
@@ -35,28 +43,20 @@
       --sans: "Public Sans", Arial, sans-serif;
     }
 
-
     * {
       box-sizing: border-box;
     }
-
 
     html {
       scroll-behavior: smooth;
     }
 
-
     body {
       margin: 0;
-
       color: var(--ink);
-
       font-family: var(--sans);
-
       line-height: 1.8;
-
       -webkit-font-smoothing: antialiased;
-
       min-height: 100vh;
 
       background:
@@ -95,18 +95,12 @@
       background-attachment: fixed;
     }
 
-
-    /* subtle scientific texture */
-
     body::before {
       content: "";
 
       position: fixed;
-
       inset: 0;
-
       pointer-events: none;
-
       opacity: 0.18;
 
       background-image:
@@ -125,137 +119,82 @@
         );
     }
 
-
     .wrap {
       width: min(1100px, calc(100% - 36px));
-
       margin: 0 auto;
     }
 
-
-    /* HEADER */
-
     .site-header {
-
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
-
       gap: 20px;
-
       padding: 26px 0;
-
       border-bottom: 1px solid var(--line);
     }
 
-
     .site-title {
       margin: 0;
-
       font-family: var(--serif);
-
       font-size: 1.65rem;
-
       font-weight: 700;
-
       letter-spacing: -0.02em;
     }
 
-
     .site-title a {
       color: var(--ink);
-
       text-decoration: none;
     }
 
-
     .site-tagline {
-
       margin: 0;
-
       color: var(--ink-soft);
-
       font-size: .88rem;
-
       text-align: right;
     }
 
-
     .back-link {
-
       display: inline-flex;
-
       align-items: center;
-
       gap: 7px;
-
       margin: 28px 0 22px;
-
       color: var(--gold-soft);
-
       text-decoration: none;
-
       font-size: .9rem;
-
       font-weight: 600;
     }
-
 
     .back-link:hover {
       text-decoration: underline;
     }
 
-
     article {
       padding-bottom: 80px;
     }
 
-
-    /* TAG */
-
     .tag {
-
       display: inline-block;
-
       padding: 6px 14px;
-
       border: 1px solid rgba(217,168,91,.28);
-
       border-radius: 999px;
-
       background: rgba(217,168,91,.08);
-
       color: var(--gold-soft);
-
       font-size: .75rem;
-
       font-weight: 700;
-
       letter-spacing: .07em;
-
       text-transform: uppercase;
     }
-
-
-    /* HEADINGS */
 
     h1,
     h2,
     h3,
     h4 {
-
       font-family: var(--serif);
-
       color: var(--ink);
     }
 
-
     h1 {
-
       max-width: 900px;
-
       margin: 17px 0 13px;
 
       font-size: clamp(
@@ -265,13 +204,10 @@
       );
 
       line-height: .98;
-
       letter-spacing: -.045em;
     }
 
-
     h2 {
-
       margin: 68px 0 15px;
 
       font-size: clamp(
@@ -281,135 +217,86 @@
       );
 
       line-height: 1.08;
-
       letter-spacing: -.025em;
     }
 
-
     h3 {
-
       margin: 0 0 8px;
-
       font-size: 1.55rem;
-
       line-height: 1.15;
     }
 
-
     .post-meta {
-
       margin: 0 0 28px;
-
       color: var(--ink-soft);
-
       font-size: .86rem;
     }
 
-
     .lede {
-
       max-width: 76ch;
-
       margin: 0 0 18px;
-
       font-size: 1.13rem;
-
       color: #dce8e5;
-
       font-weight: 500;
     }
 
-
     article > p:not(.lede):not(.post-meta) {
-
       max-width: 76ch;
-
       color: #bdcdca;
-
       font-size: 1rem;
     }
-
 
     strong {
       color: #f2f7f5;
     }
 
-
-    /* HERO */
-
     .hero-cover {
-
       position: relative;
-
       overflow: hidden;
-
       margin: 32px 0 36px;
 
       border-radius: 30px;
-
       border: 1px solid rgba(255,255,255,.11);
-
       background: #09161a;
 
       box-shadow:
         0 30px 90px rgba(0,0,0,.38);
     }
 
-
     .hero-cover img {
-
       display: block;
-
       width: 100%;
-
       aspect-ratio: 16 / 9;
-
       object-fit: cover;
-
       filter: saturate(.92) contrast(1.04);
     }
 
-
     .hero-cover::after {
-
       content: "SCIENCE LITE";
 
       position: absolute;
-
       right: 18px;
-
       bottom: 15px;
 
       padding: 6px 12px;
-
       border-radius: 999px;
 
       background: rgba(4,13,16,.62);
-
       color: rgba(240,247,244,.8);
 
       backdrop-filter: blur(14px);
 
       font-size: .7rem;
-
       font-weight: 700;
-
       letter-spacing: .08em;
     }
 
-
-    /* IMAGE BLOCK */
-
     .visual {
-
       margin: 38px 0;
-
       overflow: hidden;
 
       border-radius: 26px;
-
       border: 1px solid rgba(255,255,255,.10);
-
       background: var(--glass);
 
       box-shadow:
@@ -418,51 +305,31 @@
       backdrop-filter: blur(18px);
     }
 
-
     .visual img {
-
       display: block;
-
       width: 100%;
-
       aspect-ratio: 16 / 9;
-
       object-fit: cover;
     }
 
-
     .visual figcaption {
-
       padding: 14px 18px;
-
       color: var(--ink-soft);
-
       font-size: .78rem;
-
       line-height: 1.55;
     }
 
-
-    /* SIDE BY SIDE IMAGES */
-
     .image-grid {
-
       display: grid;
-
       grid-template-columns: repeat(2, 1fr);
-
       gap: 16px;
-
       margin: 32px 0;
     }
 
-
     .image-card {
-
       overflow: hidden;
 
       border-radius: 24px;
-
       border: 1px solid rgba(255,255,255,.10);
 
       background: rgba(255,255,255,.045);
@@ -471,37 +338,22 @@
         0 18px 50px rgba(0,0,0,.22);
     }
 
-
     .image-card img {
-
       width: 100%;
-
       display: block;
-
       aspect-ratio: 4 / 3;
-
       object-fit: cover;
     }
 
-
     .image-card p {
-
       margin: 0;
-
       padding: 12px 15px;
-
       color: var(--ink-soft);
-
       font-size: .78rem;
     }
 
-
-    /* VIDEO */
-
     .video-card {
-
       margin: 42px 0;
-
       padding: 12px;
 
       border-radius: 27px;
@@ -519,59 +371,35 @@
         0 25px 65px rgba(0,0,0,.28);
     }
 
-
     .video-frame {
-
       position: relative;
-
       overflow: hidden;
-
       border-radius: 19px;
-
       aspect-ratio: 16 / 9;
-
       background: #030708;
     }
 
-
     .video-frame iframe {
-
       position: absolute;
-
       inset: 0;
-
       width: 100%;
-
       height: 100%;
-
       border: 0;
     }
 
-
     .video-caption {
-
       padding: 12px 8px 3px;
-
       color: var(--ink-soft);
-
       font-size: .78rem;
     }
 
-
-    /* FACT CARD */
-
     .fact-card {
-
       position: relative;
-
       margin: 38px 0;
-
       padding: 28px 30px;
-
       overflow: hidden;
 
       border-radius: 26px;
-
       border: 1px solid rgba(217,168,91,.22);
 
       background:
@@ -585,61 +413,39 @@
         0 22px 55px rgba(0,0,0,.23);
     }
 
-
     .fact-card::before {
-
       content: "✦";
 
       position: absolute;
-
       right: 25px;
-
       top: 12px;
 
       color: rgba(217,168,91,.3);
-
       font-size: 4rem;
-
       font-family: var(--serif);
     }
 
-
     .fact-card .label {
-
       display: block;
-
       margin-bottom: 7px;
 
       color: var(--gold-soft);
 
       font-size: .72rem;
-
       font-weight: 700;
-
       letter-spacing: .1em;
-
       text-transform: uppercase;
     }
 
-
     .fact-card p {
-
       max-width: 70ch;
-
       margin: 0;
-
       color: #d8e4e1;
-
       font-size: 1.03rem;
     }
 
-
-    /* PULL QUOTE */
-
     .pullquote {
-
       margin: 48px 0;
-
       padding: 28px 30px;
 
       border-left: 3px solid var(--gold);
@@ -664,45 +470,30 @@
         );
     }
 
-
-    /* TIMELINE */
-
     .timeline {
-
       margin: 38px 0;
-
       display: grid;
-
       gap: 14px;
     }
 
-
     .timeline-item {
-
       display: grid;
-
       grid-template-columns: 60px 1fr;
-
       gap: 17px;
 
       padding: 20px;
 
       border-radius: 22px;
-
       border: 1px solid rgba(255,255,255,.08);
 
       background: rgba(255,255,255,.045);
     }
 
-
     .timeline-number {
-
       display: grid;
-
       place-items: center;
 
       width: 46px;
-
       height: 46px;
 
       border-radius: 50%;
@@ -717,54 +508,33 @@
       border: 1px solid rgba(217,168,91,.25);
 
       color: var(--gold-soft);
-
       font-weight: 700;
     }
 
-
     .timeline-item h3 {
-
       margin: 0 0 4px;
-
       font-size: 1.2rem;
     }
 
-
     .timeline-item p {
-
       margin: 0;
-
       color: var(--ink-soft);
-
       font-size: .9rem;
     }
 
-
-    /* DE-EXTINCTION FLOW */
-
     .flow {
-
       display: grid;
-
-      grid-template-columns:
-        repeat(5, 1fr);
-
+      grid-template-columns: repeat(5, 1fr);
       gap: 10px;
-
       margin: 35px 0;
     }
 
-
     .flow-card {
-
       min-height: 150px;
-
       padding: 18px 13px;
-
       text-align: center;
 
       border-radius: 21px;
-
       border: 1px solid rgba(255,255,255,.09);
 
       background:
@@ -775,15 +545,11 @@
         );
     }
 
-
     .flow-card span {
-
       display: grid;
-
       place-items: center;
 
       width: 38px;
-
       height: 38px;
 
       margin: 0 auto 10px;
@@ -791,57 +557,36 @@
       border-radius: 50%;
 
       background: rgba(217,168,91,.13);
-
       color: var(--gold-soft);
 
       font-weight: 700;
     }
 
-
     .flow-card strong {
-
       display: block;
-
       font-size: .82rem;
-
       line-height: 1.3;
     }
 
-
     .flow-card small {
-
       display: block;
-
       margin-top: 7px;
-
       color: var(--ink-soft);
-
       font-size: .7rem;
-
       line-height: 1.4;
     }
 
-
-    /* SOURCE CARDS */
-
     .sources {
-
       display: grid;
-
       grid-template-columns: repeat(2, 1fr);
-
       gap: 13px;
-
       margin: 25px 0;
     }
 
-
     .source-card {
-
       padding: 18px;
 
       border-radius: 20px;
-
       border: 1px solid rgba(255,255,255,.08);
 
       background:
@@ -852,156 +597,109 @@
         border-color .2s ease;
     }
 
-
     .source-card:hover {
-
       transform: translateY(-3px);
-
       border-color: rgba(217,168,91,.3);
     }
 
-
     .source-card strong {
-
       display: block;
-
       margin-bottom: 6px;
-
       font-size: .87rem;
-
       line-height: 1.4;
     }
 
-
     .source-card span {
-
       display: block;
-
       margin-bottom: 10px;
-
       color: var(--ink-soft);
-
       font-size: .74rem;
-
       line-height: 1.5;
     }
 
-
     .source-card a {
-
       color: var(--gold-soft);
-
       text-decoration: none;
-
       font-size: .76rem;
-
       font-weight: 700;
     }
 
-
     .source-card a:hover {
-
       text-decoration: underline;
     }
 
+    .credit-note {
+      max-width: 76ch;
+      margin-top: 28px;
 
-    /* FOOTER */
+      padding: 18px 20px;
 
-    footer {
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.08);
 
-      padding: 30px 0 40px;
-
-      border-top: 1px solid var(--line);
+      background: rgba(255,255,255,.035);
 
       color: var(--ink-soft);
+      font-size: .78rem;
+      line-height: 1.65;
+    }
 
+    footer {
+      padding: 30px 0 40px;
+      border-top: 1px solid var(--line);
+      color: var(--ink-soft);
       font-size: .82rem;
     }
 
-
-    /* MOBILE */
-
     @media (max-width: 800px) {
-
       .flow {
-
-        grid-template-columns:
-          repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
-
     }
 
-
     @media (max-width: 700px) {
-
       .site-header {
-
         align-items: flex-start;
-
         flex-direction: column;
       }
 
-
       .site-tagline {
-
         text-align: left;
       }
 
-
       .image-grid {
-
         grid-template-columns: 1fr;
       }
-
 
       .sources {
-
         grid-template-columns: 1fr;
       }
-
     }
 
-
     @media (max-width: 520px) {
-
       .wrap {
-
-        width: min(
-          100% - 24px,
-          1100px
-        );
+        width: min(100% - 24px, 1100px);
       }
 
-
       h1 {
-
         font-size: 2.6rem;
       }
 
-
       .hero-cover {
-
         border-radius: 21px;
       }
 
-
       .fact-card {
-
         padding: 23px 21px;
       }
 
-
       .timeline-item {
-
         grid-template-columns: 46px 1fr;
       }
 
-
       .flow {
-
         grid-template-columns: 1fr;
       }
-
     }
 
   </style>
@@ -1011,8 +709,6 @@
 <body>
 
 <div class="wrap">
-
-  <!-- HEADER -->
 
   <header class="site-header">
 
@@ -1038,8 +734,6 @@
 
     <article>
 
-      <!-- ARTICLE INTRO -->
-
       <span class="tag">
         Genetics · Evolution · De-extinction
       </span>
@@ -1055,11 +749,7 @@
       </p>
 
 
-      <!-- HERO IMAGE -->
-
       <figure class="hero-cover">
-
-        <!-- Replace with your own image -->
 
         <img
           src="../assets/mammoth-hero.jpg"
@@ -1098,8 +788,6 @@
       </p>
 
 
-      <!-- FACT -->
-
       <div class="fact-card">
 
         <span class="label">
@@ -1109,27 +797,24 @@
         <p>
 
           Scientists have not yet recreated a genetically identical extinct
-          animal. What they are developing is a much more complicated
-          approach: reconstructing selected extinct traits using ancient
-          DNA, living relatives and genome engineering.
+          animal. Current de-extinction research is focused on reconstructing
+          selected extinct traits using ancient DNA, living relatives and
+          genome engineering.
 
         </p>
 
       </div>
 
 
-      <!-- VIDEO -->
-
       <div class="video-card">
 
         <div class="video-frame">
 
-          <!-- Replace VIDEO_ID with a suitable YouTube video ID -->
-
           <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID"
-            title="De-extinction and ancient DNA"
+            src="https://www.youtube.com/embed/jDDBV3ysHRM"
+            title="De-Extinction: Can the Woolly Mammoth & Dodo Restore our Ecosystem?"
             loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
           </iframe>
 
@@ -1137,15 +822,13 @@
 
         <div class="video-caption">
 
-          Visual explainer: ancient DNA, mammoths and the science of
-          de-extinction.
+          Colossal Biosciences explains the science behind de-extinction,
+          including mammoths, dodos and ecological restoration.
 
         </div>
 
       </div>
 
-
-      <!-- SECTION 1 -->
 
       <h2>
         De-extinction: Are We Really Bringing the Dead Back?
@@ -1193,8 +876,6 @@
       </figure>
 
 
-      <!-- SECTION 2 -->
-
       <h2>
         A Mammoth Is More Than Its DNA
       </h2>
@@ -1241,7 +922,7 @@
 
           <img
             src="../assets/ancient-dna.jpg"
-            alt="Ancient DNA research visualization"
+            alt="Ancient DNA research laboratory"
             loading="lazy"
           >
 
@@ -1262,8 +943,6 @@
 
       </div>
 
-
-      <!-- SECTION 3 -->
 
       <h2>
         How Could Scientists Create a Mammoth-Like Animal?
@@ -1332,11 +1011,11 @@
           <span>4</span>
 
           <strong>
-            Create Embryo
+            Develop Embryo
           </strong>
 
           <small>
-            Develop viable reproductive systems.
+            Overcome major reproductive and developmental challenges.
           </small>
 
         </div>
@@ -1359,8 +1038,6 @@
       </div>
 
 
-      <!-- STEP 1 -->
-
       <h2>
         Step 1: Recover Ancient DNA
       </h2>
@@ -1381,14 +1058,12 @@
       <p>
 
         Ancient DNA is not normally found as one perfect biological
-        blueprint. Instead, it exists as millions of damaged fragments.
-        Scientists use sequencing and computational methods to reconstruct
-        the genome from these fragments.
+        blueprint. Instead, it exists as damaged fragments. Scientists
+        use sequencing and computational methods to reconstruct genomes
+        from these fragments.
 
       </p>
 
-
-      <!-- IMAGE -->
 
       <figure class="visual">
 
@@ -1400,15 +1075,15 @@
 
         <figcaption>
 
-          Ancient DNA is fragmented and chemically damaged, making genome
-          reconstruction a major computational and biological challenge.
+          Ancient DNA extraction in Mainz's laboratory. Work is performed
+          under sterile conditions to reduce contamination from modern DNA.
+
+          Credit: Joachim Burger / JGU, CC BY.
 
         </figcaption>
 
       </figure>
 
-
-      <!-- STEP 2 -->
 
       <h2>
         Step 2: Compare the Mammoth With a Living Relative
@@ -1435,18 +1110,15 @@
       </p>
 
 
-      <!-- VIDEO -->
-
       <div class="video-card">
 
         <div class="video-frame">
 
-          <!-- Replace VIDEO_ID with a real educational video -->
-
           <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID"
-            title="Mammoth genome and elephant genetics"
+            src="https://www.youtube.com/embed/4YKFw2KZA5o"
+            title="CRISPR: Gene editing and beyond"
             loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
           </iframe>
 
@@ -1454,15 +1126,13 @@
 
         <div class="video-caption">
 
-          Suggested video placement: mammoth genome sequencing or
-          mammoth-elephant evolution.
+          Nature Video explains how CRISPR-based gene editing works and
+          how the technology can be used beyond simply cutting DNA.
 
         </div>
 
       </div>
 
-
-      <!-- STEP 3 -->
 
       <h2>
         Step 3: Edit Living Cells
@@ -1488,9 +1158,10 @@
 
       <p>
 
-        Experimental research has already explored editing elephant cells
-        with mammoth-associated genetic sequences. But editing a cell is
-        very different from producing an entire animal.
+        Researchers have investigated reprogramming elephant cells and
+        developing genetic engineering approaches relevant to mammoth
+        reconstruction. But editing a cell is very different from
+        producing an entire animal.
 
       </p>
 
@@ -1514,8 +1185,6 @@
       </figure>
 
 
-      <!-- STEP 4 -->
-
       <h2>
         Step 4: From Edited Cell to Embryo
       </h2>
@@ -1535,8 +1204,9 @@
 
       <p>
 
-        Researchers would need to turn the edited genetic material into
-        a viable embryo and allow that embryo to develop successfully.
+        Researchers would need to develop a viable reproductive pathway
+        from the edited genetic material to an embryo and then support
+        normal development.
 
         This brings reproductive biology, embryology and stem-cell
         research into the picture.
@@ -1561,8 +1231,6 @@
       </div>
 
 
-      <!-- SECTION 5 -->
-
       <h2>
         But Would It Actually Be a Woolly Mammoth?
       </h2>
@@ -1572,8 +1240,8 @@
 
         This is where the definition of "de-extinction" becomes important.
 
-        Imagine researchers create an elephant carrying dozens of
-        carefully selected mammoth-associated genetic changes.
+        Imagine researchers create an elephant carrying many carefully
+        selected mammoth-associated genetic changes.
 
         Would that animal actually be a woolly mammoth?
 
@@ -1609,8 +1277,6 @@
       </div>
 
 
-      <!-- WOOLLY MOUSE -->
-
       <h2>
         The "Woolly Mouse" Experiment
       </h2>
@@ -1618,9 +1284,9 @@
 
       <p>
 
-        In 2025, researchers associated with Colossal reported genetically
-        engineered mice carrying multiple genetic changes associated with
-        mammoth-like characteristics.
+        In 2025, Colossal reported genetically engineered mice carrying
+        multiple genetic changes associated with mammoth traits alongside
+        mouse genetic changes known to affect hair growth.
 
         The resulting mice developed noticeably hairier coats.
 
@@ -1632,7 +1298,8 @@
         The experiment attracted attention because it demonstrated how
         combinations of genetic changes can influence physical traits.
 
-        But a woolly mouse is not a mammoth.
+        But a woolly mouse is not a mammoth, and the experiment did not
+        demonstrate the creation of a mammoth.
 
       </p>
 
@@ -1647,16 +1314,15 @@
 
         <figcaption>
 
-          Genetically engineered mice can help researchers investigate
-          how combinations of genes influence traits associated with
-          extinct species.
+          A genetically engineered "woolly mouse" carrying genetic changes
+          associated with mammoth traits.
+
+          Courtesy of Colossal Biosciences.
 
         </figcaption>
 
       </figure>
 
-
-      <!-- OTHER SPECIES -->
 
       <h2>
         What About the Dodo and Tasmanian Tiger?
@@ -1721,8 +1387,6 @@
       </p>
 
 
-      <!-- CONSERVATION -->
-
       <h2>
         Could De-extinction Help Conservation?
       </h2>
@@ -1747,9 +1411,9 @@
 
       <p>
 
-        Scientists are investigating whether genomic technologies could
-        help restore genetic diversity, understand disease resistance or
-        improve resilience in endangered populations.
+        Genomic technologies may help researchers understand genetic
+        diversity, disease resistance and biological resilience in
+        endangered populations.
 
       </p>
 
@@ -1771,8 +1435,6 @@
 
       </figure>
 
-
-      <!-- ECOLOGY -->
 
       <h2>
         Where Would a Resurrected Animal Actually Live?
@@ -1807,8 +1469,6 @@
 
       </p>
 
-
-      <!-- ETHICS -->
 
       <h2>
         And Then Comes the Ethical Question
@@ -1895,8 +1555,6 @@
       </div>
 
 
-      <!-- OVERALL VIEW -->
-
       <h2>
         Overall View
       </h2>
@@ -1970,18 +1628,15 @@
       </div>
 
 
-      <!-- FINAL VIDEO -->
-
       <div class="video-card">
 
         <div class="video-frame">
 
-          <!-- Replace VIDEO_ID with a credible educational/scientific video -->
-
           <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID"
-            title="The science of de-extinction"
+            src="https://www.youtube.com/embed/4YKFw2KZA5o"
+            title="CRISPR: Gene editing and beyond"
             loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
           </iframe>
 
@@ -1989,15 +1644,13 @@
 
         <div class="video-caption">
 
-          Further viewing: the science, possibilities and limitations of
-          de-extinction.
+          Further viewing: Nature Video's explanation of CRISPR and
+          modern gene-editing technology.
 
         </div>
 
       </div>
 
-
-      <!-- SOURCES -->
 
       <h2>
         Scientific Papers &amp; Further Reading
@@ -2131,11 +1784,12 @@
         <div class="source-card">
 
           <strong>
-            Nature: The "woolly mouse" experiment
+            Meet the "woolly mouse": why scientists doubt it is a big step
+            towards recreating mammoths
           </strong>
 
           <span>
-            Scientific discussion of genetically engineered mice carrying
+            Nature · 2025 report on genetically engineered mice carrying
             mammoth-associated traits.
           </span>
 
@@ -2153,12 +1807,12 @@
         <div class="source-card">
 
           <strong>
-            Nature Biotechnology: De-extinction research
+            Colossal raises $200 million to bring back the dodo
           </strong>
 
           <span>
-            Overview of current research involving mammoths, dodos and
-            thylacines.
+            Nature Biotechnology · Current de-extinction plans involving
+            the mammoth, thylacine and dodo.
           </span>
 
           <a
@@ -2167,6 +1821,29 @@
             rel="noopener"
           >
             Read article →
+          </a>
+
+        </div>
+
+
+        <div class="source-card">
+
+          <strong>
+            Substitutions in woolly mammoth hemoglobin confer biochemical
+            properties adaptive for cold tolerance
+          </strong>
+
+          <span>
+            Nature Genetics · Research into a molecular adaptation that
+            helped mammoth hemoglobin function in cold conditions.
+          </span>
+
+          <a
+            href="https://www.nature.com/articles/ng.574"
+            target="_blank"
+            rel="noopener"
+          >
+            Read research →
           </a>
 
         </div>
@@ -2192,6 +1869,30 @@
           </a>
 
         </div>
+
+
+      </div>
+
+
+      <div class="credit-note">
+
+        <strong>Image credits:</strong><br><br>
+
+        Mammoth comparison image:
+        BBC Wildlife Magazine.
+        <br><br>
+
+        Ancient DNA laboratory image:
+        Joachim Burger / JGU, CC BY.
+        <br><br>
+
+        Woolly mouse image:
+        Courtesy of Colossal Biosciences.
+        <br><br>
+
+        Other article images:
+        Wikimedia Commons, with individual file-page attribution and
+        licensing applying to each image.
 
       </div>
 
